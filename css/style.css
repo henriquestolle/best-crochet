@@ -115,9 +115,26 @@ header {
 }
 
 #menu-visible {
-    display: none;
-    border-color: aliceblue;
-    padding: 40px;
+    display: none; /* Inicialmente oculto */
+    margin: 50px -33px 0px -150px; /* Centralizado horizontalmente com margem superior e inferior de 10px */
+    max-width: 250px; /* Largura máxima do menu */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #f8f9fa; /* Cor de fundo */
+    border: 1px solid #dee2e6; /* Borda com cor suave */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 2px 3px 2px rgba(114, 115, 118, 0.381); /* Sombra suave */
+}
+
+#menu-visible a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #333; /* Cor do texto */
+    transition: color 0.3s ease; /* Transição suave de cor ao passar o mouse */
+}
+
+#menu-visible a:hover {
+    color: #bf26ba; /* Cor do texto ao passar o mouse */
 }
 /* add */
 .add {
