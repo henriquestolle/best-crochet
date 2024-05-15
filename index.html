@@ -12,20 +12,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="./img/logo-best-crochet.png" type="image/x-icon">
     <!-- JavaScript Carrosel -->
-    <script src="./carrosel.js"></script>
+    <script src="./js/main.js"></script>
 </head>
+<body>
     <!-- Header Section -->
     <header>
         <div>
             <a href="./index.html"><img id="logo-img" src="./img/logo-best-crochet.png" alt="logo-best-crochet"></a>
         </div>
-        <nav id="menu">
-            <a class="item-menu" href="./atendimento.html">Atendimento</a>
-            <a class="item-menu" href="./colecao.html">Coleção</a>
+        <nav class="burger-menu" id="menu" onclick="burger()">
+            <label for="burger" class="burger">
+                <input id="burger" type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div id="menu-visible">
+                    <a class="item-menu" id="link-whatsapp" data-encoded-phone="NDc5ODg4ODMxODA=">Atendimento</a>
+                    <a class="item-menu" href="./colecao.html">Coleção</a>
+                </div>
+            </label>
         </nav>
     </header>
     <!-- Carousel Section -->
