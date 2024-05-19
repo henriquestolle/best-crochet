@@ -117,10 +117,10 @@ header {
 #menu-visible {
     display: none; /* Inicialmente oculto */
     margin: 50px -33px 0px -150px; /* Centralizado horizontalmente com margem superior e inferior de 10px */
-    max-width: 250px; /* Largura máxima do menu */
+    max-width: 300px; /* Largura máxima do menu */
     padding: 10px; /* Espaçamento interno */
     background-color: #f8f9fa; /* Cor de fundo */
-    border: 1px solid #dee2e6; /* Borda com cor suave */
+    border: 3px solid #0360bd; /* Borda com cor suave */
     border-radius: 8px; /* Borda arredondada */
     box-shadow: 0 2px 3px 2px rgba(114, 115, 118, 0.381); /* Sombra suave */
 }
