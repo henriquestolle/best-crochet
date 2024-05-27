@@ -1,17 +1,16 @@
 {
   "name": "e-commerce",
-  "homepage": "http://henriquestolle.github.io/best-crochet",
+  "homepage": "https://henriquestolle.github.io/best-crochet/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "react-scripts start",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
