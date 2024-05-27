@@ -1,0 +1,29 @@
+.lista-produtos-main > h1 {
+  margin: 40px;
+  text-align: center;
+}
+
+.lista-de-produtos {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 55px 25px;
+  width: 100vw;
+}
+
+.btn-carregar-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.btn-carregar-item > button {
+  padding: 15px;
+  border-radius: 10px;
+  border: 0px none;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgba(112, 107, 108, 0.301);
+}
