@@ -5,6 +5,9 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <img src={logo_best_crochet} alt="Logo" />
+      <div className="search">
+        <input type="search" name="search" id="search" />
+      </div>
     </div>
   );
 };
