@@ -1,6 +1,6 @@
 # Best Crochet E-Commerce 
 This is a E-commerce project, crochet web store.
-- Open the Project for mobile: [Ir para a Loja](https://henriquestolle.github.io/best-crochet/)
+- Open the Project for mobile: [Go to The Store](https://henriquestolle.github.io/best-crochet/)
 
 
 # React + Vite
