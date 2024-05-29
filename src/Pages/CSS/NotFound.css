@@ -195,7 +195,7 @@ h2 {
 /* Responsividade */
 @media (max-height: 710px) {
   .conteudos {
-    gap: 110px;
+    gap: 130px;
   }
 }
 @media (min-height: 790px) {
