@@ -1,10 +1,10 @@
 .banner {
-  margin: 50px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
   text-align: center;
 }
 
 .banner-img {
-  width: 95vw;
+  width: 100vw;
   height: auto;
   border-radius: 5px;
   box-shadow: 0px 4px 5cqmax 2px rgba(114, 103, 103, 0.261);

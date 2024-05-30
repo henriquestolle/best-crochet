@@ -4,7 +4,7 @@ import Item from "../Item/Item";
 import "./ListaDeProdutos.css";
 
 const ListaDeProdutos = () => {
-  const [produtosCarregados, setProdutosCarregados] = useState(4); // Inicialmente, carregar 4 produtos
+  const [produtosCarregados, setProdutosCarregados] = useState(8); // Inicialmente, carregar 4 produtos
 
   const carregarMaisProdutos = () => {
     // Aumenta o número de produtos a serem carregados

@@ -11,6 +11,9 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/shop" element={<Shop />} />
+          {/* <Route path="/shop" element={<Sobre />} /> */}
+          {/* <Route path="/Product" element={<Product />} /> */}
+          {/* <Route path="/Contato" element={<Contato />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
