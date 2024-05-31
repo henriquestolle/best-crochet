@@ -1,0 +1,1 @@
+import{j as o}from"./index-FrcvvJAD.js";import{F as r}from"./Footer-BgzVStSO.js";import{N as s}from"./Navbar-muZwEx8r.js";import"./logo-best-crochet-ugFtgGhX.js";const m=()=>o.jsxs("div",{children:[o.jsx(s,{}),o.jsxs("p",{className:"pagination",children:["Home ",">"," Loja ",">"," Produtos"]}),o.jsx("h1",{children:"Produtos"}),o.jsx(r,{})]});export{m as default};
