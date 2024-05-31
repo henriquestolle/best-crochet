@@ -17,7 +17,7 @@ const LandingPage = () => {
           <li>Visitar Loja</li>
         </Link>
         <a
-          href="https://wa.me/47988883180?text=Olá,%20estou%20muito%20interessado%20nos%20seus%20produtos%20de%20crochê.%20Gostaria%20de%20saber%20mais%20detalhes%20sobre%20os%20tipos%20de%20produtos%20disponíveis,%20preços%20e%20opções%20de%20personalização.%20Obrigado!"
+          href="https://wa.me/47988883180?text=Olá,%20tudo%20bem?"
           target="_blank"
         >
           <li>WhatsApp</li>

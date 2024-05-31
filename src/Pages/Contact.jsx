@@ -26,8 +26,7 @@ const Contact = () => {
           </div>
         </div>
         <a
-          href="https://wa.me/47988883180?text=Olá,%20Gostaria%20de%20saber%20mais%20sobre%20os%20Produtos%20D
-          disponíveis!"
+          href="https://wa.me/47988883180?text=Olá,%20tudo%20bem?"
           target="_blank"
         >
           <div className="whatsapp">WhatsApp</div>
