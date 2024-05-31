@@ -1,9 +1,10 @@
-
-
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <div>
+      <p className="pagination">Home {`>`} Loja</p>
+      <h1>Cart</h1>
+    </div>
   );
-}
+};
 
-export default Cart
+export default Cart;

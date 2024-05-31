@@ -7,7 +7,7 @@ const Item = (props) => {
       <h3>{props.name}</h3>
       <p>
         De:
-        <span className="preco-velho">{props.old_price.toFixed(2)}</span>
+        <span className="preco-velho">R$: {props.old_price.toFixed(2)}</span>
       </p>
       <p>
         Por:

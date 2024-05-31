@@ -24,9 +24,9 @@ const Navbar = () => {
           &times; {/* Ícone de fechar */}
         </button>
         <Link to="/">Home</Link>
-        <Link to="/">Sobre</Link> {/* <Link to="/About">Sobre</Link> */}
-        <Link to="/">Produtos</Link> {/* <Link to="/Product">Produtos</Link> */}
-        <Link to="/">Contato</Link> {/* <Link to="/Contato">Contato</Link> */}
+        <Link to="/about">Sobre</Link>
+        <Link to="/product">Produtos</Link>
+        <Link to="/contact">Contato</Link>
       </div>
       <div className="carrinho-compras">
         <img src={carrinho_de_compras} alt="carrinho-de-compras" />

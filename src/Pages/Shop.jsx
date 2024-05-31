@@ -13,7 +13,7 @@ const Shop = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2700);
+    }, 1200);
 
     // Limpa o timer quando o componente é desmontado
     return () => clearTimeout(timer);
@@ -25,6 +25,7 @@ const Shop = () => {
       ) : (
         <>
           <Navbar />
+          <p className="pagination">Home {`>`} Loja</p>
           <div className="banner">
             <img className="banner-img" src={banner} alt="banner" />
           </div>
