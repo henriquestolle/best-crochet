@@ -1,0 +1,1 @@
+import{j as r}from"./index-vIZzzhdb.js";import{N as o}from"./Navbar-DQtiKPjf.js";import{F as s}from"./Footer-CmQEFxFw.js";import"./logo-best-crochet-ugFtgGhX.js";const m=()=>r.jsxs("div",{children:[r.jsx(o,{}),r.jsxs("p",{className:"pagination",children:["Home ",">"," Loja ",">"," Carrinho"]}),r.jsx("h1",{children:"Carrinho"}),r.jsx(s,{})]});export{m as default};
