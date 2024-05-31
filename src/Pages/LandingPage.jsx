@@ -22,11 +22,12 @@ const LandingPage = () => {
         >
           <li>WhatsApp</li>
         </a>
-        <li>
-          <a href="https://www.instagram.com/bestcrochetjoinville/">
-            Rede Social
-          </a>
-        </li>
+        <a
+          href="https://www.instagram.com/bestcrochetjoinville/"
+          target="_blank"
+        >
+          <li>Rede Social</li>
+        </a>
       </ul>
       <Footer />
     </div>
