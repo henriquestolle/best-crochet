@@ -24,12 +24,18 @@ const Navbar = () => {
           &times; {/* Ícone de fechar */}
         </button>
         <Link to="/">Home</Link>
-        <Link to="/about">Sobre</Link>
+        <Link to="/about">Sobre Nós</Link>
         <Link to="/product">Produtos</Link>
         <Link to="/contact">Contato</Link>
       </div>
       <div className="carrinho-compras">
-        <img src={carrinho_de_compras} alt="carrinho-de-compras" />
+        <Link to="/cart">
+          <img
+            className="carrinho-compras-img "
+            src={carrinho_de_compras}
+            alt="carrinho-de-compras"
+          />
+        </Link>
       </div>
     </div>
   );

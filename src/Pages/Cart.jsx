@@ -1,8 +1,15 @@
+import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
+
 const Cart = () => {
   return (
     <div>
-      <p className="pagination">Home {`>`} Loja</p>
-      <h1>Cart</h1>
+      <Navbar />
+      <p className="pagination">
+        Home {`>`} Loja {`>`} Carrinho
+      </p>
+      <h1>Carrinho</h1>
+      <Footer />
     </div>
   );
 };
