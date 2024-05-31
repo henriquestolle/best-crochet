@@ -1,25 +1,31 @@
+import React, { lazy, Suspense } from "react";
 import "./Pages/CSS/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from "./Pages/LandingPage";
-import Shop from "../src/Pages/Shop";
-import NotFound from "../src/Pages/NotFound";
-import About from "../src/Pages/About";
-import Product from "./Pages/Product";
-import Contact from "../src/Pages/Contact";
-import Cart from "../src/Pages/Cart";
+import Carregando from "../src/Components/Carregando/Carregando";
+
+const LandingPage = lazy(() => import("./Pages/LandingPage"));
+const Shop = lazy(() => import("../src/Pages/Shop"));
+const NotFound = lazy(() => import("../src/Pages/NotFound"));
+const About = lazy(() => import("../src/Pages/About"));
+const Product = lazy(() => import("./Pages/Product"));
+const Contact = lazy(() => import("../src/Pages/Contact"));
+const Cart = lazy(() => import("../src/Pages/Cart"));
+
 function App() {
   return (
     <div>
       <BrowserRouter basename="/best-crochet">
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<Carregando />}>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </div>
   );
