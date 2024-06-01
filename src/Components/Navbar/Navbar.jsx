@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+// Navbar.js
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo_best_crochet from "../Assets/logo-best-crochet.png";
@@ -11,8 +12,30 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Estado para controlar a visibilidade da navbar
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY < lastScrollY) {
+      setShowNavbar(true);
+    } else {
+      setShowNavbar(false);
+    }
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <div className="navbar">
+    <div className={`navbar ${showNavbar ? "visible" : "hidden"}`}>
       <div className="menu-bar" onClick={toggleMenu}>
         &#9776; {/* Ícone de menu hambúrguer */}
       </div>
