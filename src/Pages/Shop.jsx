@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import "./CSS/Shop.css";
 import banner from "../Components/Assets/banner_best_crochet.png";
 import Navbar from "../Components/Navbar/Navbar";

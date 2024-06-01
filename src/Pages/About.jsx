@@ -64,7 +64,11 @@ const About = () => {
               </div>
             </div>
             <hr />
-            <img src={logo_best_crochet} alt="Logo Best Crochet" />
+            <img
+              className="img-logoo"
+              src={logo_best_crochet}
+              alt="Logo Best Crochet"
+            />
           </div>
         </div>
       </div>
