@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import all_data from "../Assets/all_data";
 import "./ProductDisplay.css";
 import Footer from "../../Components/Footer/Footer";
 import carrinho from "../Assets/carrinho-de-compras.png";
+import { ShopContext } from "../../Context/ShopContext";
 
 const ProductDisplay = () => {
   const { productId } = useParams();
+
+  // Context Carrinho
+  const { addToCart } = useContext(ShopContext);
 
   // Converta productId para um número
   const productIdNumber = parseInt(productId);
@@ -45,7 +49,12 @@ const ProductDisplay = () => {
           <hr className="hr-produto" />
           {/* Parte de Baixo */}
           <div className="btn-baixo">
-            <button type="button">
+            <button
+              type="button"
+              onClick={() => {
+                addToCart(product.id);
+              }}
+            >
               Adicionar ao Carrinho{" "}
               <img
                 className="img-carrinho-btn"

@@ -1,13 +1,17 @@
 // Navbar.js
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo_best_crochet from "../Assets/logo-best-crochet.png";
 import carrinho_de_compras from "../Assets/carrinho-de-compras.png";
+import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
   // Função para o Menu Bar
   const [isOpen, setIsOpen] = useState(false);
+
+  // Contador do carrinho
+  const { getTotalCartItems } = useContext(ShopContext);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -38,7 +42,7 @@ const Navbar = () => {
             alt="carrinho-de-compras"
           />
         </Link>
-        <span className="qnt-itens-carrinho">0</span>
+        <span className="qnt-itens-carrinho">{getTotalCartItems()}</span>
       </div>
     </div>
   );

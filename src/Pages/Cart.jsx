@@ -1,5 +1,6 @@
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
+import CartItem from "../Components/CartItems/CartItem";
 
 const Cart = () => {
   return (
@@ -8,7 +9,7 @@ const Cart = () => {
       <p className="pagination">
         Home {`>`} Loja {`>`} Carrinho
       </p>
-      <h1>Carrinho</h1>
+      <CartItem />
       <Footer />
     </div>
   );
