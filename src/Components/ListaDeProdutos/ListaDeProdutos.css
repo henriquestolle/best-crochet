@@ -6,7 +6,7 @@
 .lista-produtos-main > .conteudo {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 55px;
 }
 
 .lista-produtos-main > .conteudo > .conteudo-titulo {
@@ -21,7 +21,7 @@
   grid-template-columns: auto auto;
   justify-content: center;
   align-items: center;
-  gap: 55px 25px;
+  gap: 50px 15px;
   width: 100vw;
 }
 
@@ -41,10 +41,11 @@
   font-size: 18px;
   font-weight: 600;
   color: white;
-  background-color: rgba(237, 14, 14, 0.805);
+  background-color: rgba(4, 4, 4, 0.916);
+  box-shadow: 1px 1px 1px 5px rgba(0, 0, 0, 0.524);
 }
 
 .btn-carregar-item > button:hover {
-  background-color: rgba(237, 81, 14, 0.805);
+  background-color: rgb(2, 2, 2);
   transition: 0.2s;
 }
