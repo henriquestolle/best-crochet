@@ -45,6 +45,7 @@ let all_data = [
     img: img_bolsa_01,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 2,
@@ -52,6 +53,7 @@ let all_data = [
     img: img_bolsa_02,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 3,
@@ -59,6 +61,7 @@ let all_data = [
     img: img_bolsa_03,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 4,
@@ -66,6 +69,7 @@ let all_data = [
     img: img_bolsa_04,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 5,
@@ -73,6 +77,7 @@ let all_data = [
     img: img_bolsa_05,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 6,
@@ -80,6 +85,7 @@ let all_data = [
     img: img_bolsa_06,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 7,
@@ -87,6 +93,7 @@ let all_data = [
     img: img_bolsa_07,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 8,
@@ -94,6 +101,7 @@ let all_data = [
     img: img_bolsa_08,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 9,
@@ -101,6 +109,7 @@ let all_data = [
     img: img_bolsa_09,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 10,
@@ -108,6 +117,7 @@ let all_data = [
     img: img_bolsa_10,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 11,
@@ -115,6 +125,7 @@ let all_data = [
     img: img_bolsa_11,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   // {
   //     id: 12,
@@ -122,6 +133,7 @@ let all_data = [
   //     img: img_bolsa_12,
   //     new_price: 99.99,
   //     old_price: 129.99,
+  // qnt: 1,
   // },
   {
     id: 13,
@@ -129,6 +141,7 @@ let all_data = [
     img: img_bolsa_13,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 14,
@@ -136,6 +149,7 @@ let all_data = [
     img: img_bolsa_14,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 15,
@@ -143,6 +157,7 @@ let all_data = [
     img: img_bolsa_15,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 16,
@@ -150,6 +165,7 @@ let all_data = [
     img: img_bolsa_16,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 17,
@@ -157,6 +173,7 @@ let all_data = [
     img: img_bolsa_17,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 18,
@@ -164,6 +181,7 @@ let all_data = [
     img: img_bolsa_18,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 19,
@@ -171,6 +189,7 @@ let all_data = [
     img: img_bolsa_19,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 20,
@@ -178,6 +197,7 @@ let all_data = [
     img: img_bolsa_20,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 21,
@@ -185,6 +205,7 @@ let all_data = [
     img: img_bolsa_21,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 22,
@@ -192,6 +213,7 @@ let all_data = [
     img: img_bolsa_22,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 23,
@@ -199,6 +221,7 @@ let all_data = [
     img: img_bolsa_23,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 24,
@@ -206,6 +229,7 @@ let all_data = [
     img: img_bolsa_24,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 25,
@@ -213,6 +237,7 @@ let all_data = [
     img: img_bolsa_25,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 26,
@@ -220,6 +245,7 @@ let all_data = [
     img: img_bolsa_26,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 27,
@@ -227,6 +253,7 @@ let all_data = [
     img: img_bolsa_27,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 28,
@@ -234,6 +261,7 @@ let all_data = [
     img: img_bolsa_28,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 29,
@@ -241,6 +269,7 @@ let all_data = [
     img: img_bolsa_29,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 30,
@@ -248,6 +277,7 @@ let all_data = [
     img: img_bolsa_30,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 31,
@@ -255,6 +285,7 @@ let all_data = [
     img: img_bolsa_31,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 32,
@@ -262,6 +293,7 @@ let all_data = [
     img: img_bolsa_32,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 33,
@@ -269,6 +301,7 @@ let all_data = [
     img: img_bolsa_33,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 34,
@@ -276,6 +309,7 @@ let all_data = [
     img: img_bolsa_34,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 35,
@@ -283,6 +317,7 @@ let all_data = [
     img: img_bolsa_35,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 36,
@@ -290,6 +325,7 @@ let all_data = [
     img: img_bolsa_36,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 37,
@@ -297,6 +333,7 @@ let all_data = [
     img: img_bolsa_37,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 38,
@@ -304,6 +341,7 @@ let all_data = [
     img: img_bolsa_38,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
   {
     id: 39,
@@ -311,6 +349,7 @@ let all_data = [
     img: img_bolsa_39,
     new_price: 99.99,
     old_price: 129.99,
+    qnt: 1,
   },
 ];
 export default all_data;

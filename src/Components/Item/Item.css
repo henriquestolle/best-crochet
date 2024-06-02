@@ -10,7 +10,19 @@
   border-radius: 5px;
 }
 
-.item > button {
+.info-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.info-itens > p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* Botão */
+.btn-item-buy {
   margin: 10px 0px 0px 0px;
   width: 100%;
   text-align: center;
@@ -19,13 +31,15 @@
   font-weight: 600;
   border-radius: 5px;
   border: 0px none;
-  background-color: rgba(9, 120, 199, 0.849);
+  background-color: #f77382;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   color: white;
 }
 
-.item > button:hover {
-  background-color: rgb(16, 103, 224);
-  transition: 0.15s;
+.btn-item-buy:hover {
+  background-color: #f73b51;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.2s;
 }
 
 .preco-velho {

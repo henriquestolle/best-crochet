@@ -21,11 +21,13 @@ const ListaDeProdutos = () => {
       <div className="lista-de-produtos">
         {all_data.slice(0, produtosCarregados).map((product, i) => (
           <Item
+            id={product.id}
             key={i}
             name={product.name}
             img={product.img}
             new_price={product.new_price}
             old_price={product.old_price}
+            qnt={product.qnt}
           />
         ))}
       </div>
