@@ -20,7 +20,7 @@ const LandingPage = () => {
           href="https://wa.me/47988883180?text=Olá,%20tudo%20bem?"
           target="_blank"
         >
-          <li>WhatsApp</li>
+          <li>Compre Via WhatsApp</li>
         </a>
         <a
           href="https://www.instagram.com/bestcrochetjoinville/"
