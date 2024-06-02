@@ -10,19 +10,21 @@ const About = lazy(() => import("../src/Pages/About"));
 const Product = lazy(() => import("./Pages/Product"));
 const Contact = lazy(() => import("../src/Pages/Contact"));
 const Cart = lazy(() => import("../src/Pages/Cart"));
+const ProductDisplay = lazy(() =>
+  import("./Components/ProductDisplay/ProductDisplay")
+);
 
 function App() {
   return (
     <div>
-      <BrowserRouter basename="/best-crochet">
+      <BrowserRouter basename="/best-crochet/">
         <Suspense fallback={<Carregando />}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/about" element={<About />} />
-            <Route path="/product" element={<Product />}>
-              <Route path=":productId" element={<Product />} />
-            </Route>
+            <Route path="/product" element={<Product />} />
+            <Route path="/product/:productId" element={<ProductDisplay />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<NotFound />} />
