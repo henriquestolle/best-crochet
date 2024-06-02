@@ -1,0 +1,16 @@
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.conteudo-titulo {
+  margin: 100px 0px 0px 0px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.titulo {
+  width: 80vw;
+}

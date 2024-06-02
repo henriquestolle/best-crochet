@@ -3,6 +3,19 @@
   text-align: center;
 }
 
+.lista-produtos-main > .conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.lista-produtos-main > .conteudo > .conteudo-titulo {
+  margin: 100px 0px 100px 0px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
 .lista-de-produtos {
   display: grid;
   grid-template-columns: auto auto;
@@ -12,6 +25,7 @@
   width: 100vw;
 }
 
+/* Botão de Carregar  */
 .btn-carregar-item {
   display: flex;
   justify-content: center;
@@ -20,10 +34,17 @@
 }
 
 .btn-carregar-item > button {
+  width: 100%;
   padding: 15px;
   border-radius: 10px;
   border: 0px none;
   font-size: 18px;
   font-weight: 600;
-  background-color: rgba(112, 107, 108, 0.301);
+  color: white;
+  background-color: rgba(237, 14, 14, 0.805);
+}
+
+.btn-carregar-item > button:hover {
+  background-color: rgba(237, 81, 14, 0.805);
+  transition: 0.2s;
 }

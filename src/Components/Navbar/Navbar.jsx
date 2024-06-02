@@ -8,34 +8,13 @@ import carrinho_de_compras from "../Assets/carrinho-de-compras.png";
 const Navbar = () => {
   // Função para o Menu Bar
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Estado para controlar a visibilidade da navbar
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY < lastScrollY) {
-      setShowNavbar(true);
-    } else {
-      setShowNavbar(false);
-    }
-    setLastScrollY(currentScrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
-
   return (
-    <div className={`navbar ${showNavbar ? "visible" : "hidden"}`}>
+    <div className="navbar">
       <div className="menu-bar" onClick={toggleMenu}>
         &#9776; {/* Ícone de menu hambúrguer */}
       </div>
@@ -54,11 +33,12 @@ const Navbar = () => {
       <div className="carrinho-compras">
         <Link to="/cart">
           <img
-            className="carrinho-compras-img "
+            className="carrinho-compras-img"
             src={carrinho_de_compras}
             alt="carrinho-de-compras"
           />
         </Link>
+        <span className="qnt-itens-carrinho">0</span>
       </div>
     </div>
   );
