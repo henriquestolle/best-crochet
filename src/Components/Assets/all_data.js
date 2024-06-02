@@ -46,6 +46,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 2,
@@ -54,6 +56,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 3,
@@ -62,6 +66,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 4,
@@ -70,6 +76,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 5,
@@ -78,6 +86,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 6,
@@ -86,6 +96,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 7,
@@ -94,6 +106,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 8,
@@ -102,6 +116,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 9,
@@ -110,6 +126,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 10,
@@ -118,6 +136,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 11,
@@ -126,6 +146,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   // {
   //     id: 12,
@@ -134,6 +156,7 @@ let all_data = [
   //     new_price: 99.99,
   //     old_price: 129.99,
   // qnt: 1,
+  // description: "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   // },
   {
     id: 13,
@@ -142,6 +165,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 14,
@@ -150,6 +175,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 15,
@@ -158,6 +185,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 16,
@@ -166,6 +195,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 17,
@@ -174,6 +205,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 18,
@@ -182,6 +215,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 19,
@@ -190,6 +225,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 20,
@@ -198,6 +235,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 21,
@@ -206,6 +245,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 22,
@@ -214,6 +255,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 23,
@@ -222,6 +265,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 24,
@@ -230,6 +275,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 25,
@@ -238,6 +285,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 26,
@@ -246,6 +295,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 27,
@@ -254,6 +305,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 28,
@@ -262,6 +315,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 29,
@@ -270,6 +325,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 30,
@@ -278,6 +335,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 31,
@@ -286,6 +345,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 32,
@@ -294,6 +355,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 33,
@@ -302,6 +365,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 34,
@@ -310,6 +375,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 35,
@@ -318,6 +385,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 36,
@@ -326,6 +395,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 37,
@@ -334,6 +405,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 38,
@@ -342,6 +415,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
   {
     id: 39,
@@ -350,6 +425,8 @@ let all_data = [
     new_price: 99.99,
     old_price: 129.99,
     qnt: 1,
+    description:
+      "Descubra a elegância artesanal com nossa bolsa de crochê. Feita à mão com fios de alta qualidade, cada peça é única e versátil, perfeita para qualquer ocasião. Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
 ];
 export default all_data;
