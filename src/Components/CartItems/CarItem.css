@@ -12,6 +12,7 @@
 .hr-no-style {
   margin: 20px 0px;
   height: 1px;
+  width: 100vw;
   background-color: rgba(110, 104, 104, 0.407);
   border: 0;
 }
