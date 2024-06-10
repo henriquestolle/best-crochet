@@ -41,6 +41,14 @@ const ListaDeProdutos = () => {
       <div className="banner" onClick={scrollToEndOfScreen}>
         <img className="banner-img" src={banner} alt="banner" />
       </div>
+      <div className="search-item">
+        <input
+          placeholder="Nome do Produto"
+          type="search"
+          name="search"
+          id="search"
+        />
+      </div>
       <div className="conteudo">
         <p className="conteudo-titulo">Todos Produtos</p>
       </div>
