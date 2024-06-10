@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import all_data from "../Assets/all_data";
@@ -9,15 +9,27 @@ import { ShopContext } from "../../Context/ShopContext";
 
 const ProductDisplay = () => {
   const { productId } = useParams();
-
-  // Context Carrinho
   const { addToCart } = useContext(ShopContext);
+
+  // Estado para o pop-up
+  const [showPopup, setShowPopup] = useState(false);
 
   // Converta productId para um número
   const productIdNumber = parseInt(productId);
 
   // Encontre o produto correspondente com base no productIdNumber
   const product = all_data.find((product) => product.id === productIdNumber);
+
+  // Função para mostrar o pop-up e reduzir a quantidade
+  const handleAddToCart = (id) => {
+    if (product.qnt > 0) {
+      addToCart(id);
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000); // Ajustei para 3 segundos
+    }
+  };
 
   return (
     <div className="product-display">
@@ -51,9 +63,8 @@ const ProductDisplay = () => {
           <div className="btn-baixo">
             <button
               type="button"
-              onClick={() => {
-                addToCart(product.id);
-              }}
+              onClick={() => handleAddToCart(product.id)}
+              disabled={product.qnt <= 0} // Desabilita o botão se a quantidade for 0 ou menos
             >
               Adicionar ao Carrinho{" "}
               <img
@@ -63,6 +74,11 @@ const ProductDisplay = () => {
               />
             </button>
           </div>
+        </div>
+      )}
+      {showPopup && (
+        <div className="popup">
+          <p>Item adicionado ao carrinho!</p>
         </div>
       )}
       <Footer />

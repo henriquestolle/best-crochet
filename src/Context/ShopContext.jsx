@@ -6,7 +6,7 @@ export const ShopContext = createContext(null);
 const getDefaultCart = () => {
   let cart = {};
   for (let index = 0; index < all_data.length; index++) {
-    cart[index] = 0;
+    cart[all_data[index].id] = 0; // Use the product id as the key
   }
   return cart;
 };
@@ -16,10 +16,26 @@ const ShopContextProvider = (props) => {
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    // Decrease the quantity in all_data
+    const product = all_data.find((product) => product.id === itemId);
+    if (product && product.qnt > 0) {
+      product.qnt -= 1;
+    }
   };
 
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    setCartItems((prev) => {
+      if (prev[itemId] > 0) {
+        const newCartItems = { ...prev, [itemId]: prev[itemId] - 1 };
+        // Increase the quantity in all_data
+        const product = all_data.find((product) => product.id === itemId);
+        if (product) {
+          product.qnt += 1;
+        }
+        return newCartItems;
+      }
+      return prev;
+    });
   };
 
   // Preço Total (TEM QUE TERMINAR)
@@ -30,8 +46,8 @@ const ShopContextProvider = (props) => {
         let itemInfo = all_data.find((product) => product.id === Number(item));
         totalAmount += itemInfo.new_price * cartItems[item];
       }
-      return totalAmount;
     }
+    return totalAmount;
   };
 
   const getTotalCartItems = () => {

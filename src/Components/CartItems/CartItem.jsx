@@ -8,14 +8,6 @@ const CartItem = () => {
   return (
     <div className="cart-items">
       <p className="carrinho-titulo">Carrinho</p>
-      <div className="cart-format-main">
-        <p>Item</p>
-        <p>Nome</p>
-        <p>Preço</p>
-        <p>Quant.</p>
-        <p>Total</p>
-        <p>Excluir</p>
-      </div>
       <hr className="hr-no-style" />
       {all_data.map((e) => {
         if (cartItems[e.id] > 0) {
@@ -28,11 +20,9 @@ const CartItem = () => {
                   className="carticon-product-icone"
                 />
                 <p>{e.name}</p>
-                <p>{e.new_price}</p>
-                <button type="button" className="btn-cartitems-qnt">
-                  {cartItems[e.id]}
-                </button>
-                <p>{e.new_price * cartItems[e.id]}</p>
+
+                <p>R${e.new_price * cartItems[e.id].toFixed(2)}</p>
+                <p className="btn-cartitems-qnt">{cartItems[e.id]}x</p>
                 <img
                   className="cart-item-excluir-icon"
                   src={excluir_icon}

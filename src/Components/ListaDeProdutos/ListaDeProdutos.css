@@ -10,9 +10,9 @@
 }
 
 .lista-produtos-main > .conteudo > .conteudo-titulo {
-  margin: 100px 0px 100px 0px;
-  text-align: center;
-  font-size: 3rem;
+  margin: 100px 0px 40px 10px;
+  text-align: left;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 

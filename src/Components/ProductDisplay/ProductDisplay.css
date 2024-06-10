@@ -1,6 +1,6 @@
 .product-display {
   gap: 55px;
-  margin: 100px 0px 0px 0px;
+  margin: 90px 0px 0px 0px;
 }
 
 /* Geral */
@@ -56,7 +56,7 @@
 .preco-produto-descricao {
   font-size: 1.4rem;
   font-weight: 500;
-  color: red;
+  color: rgb(61, 164, 1);
 }
 
 .preco-velho-descricao {
@@ -67,7 +67,7 @@
 .promo {
   font-size: 1.1rem;
   font-weight: 500;
-  color: brown;
+  color: rgb(0, 0, 0);
 }
 
 /* Botão */
@@ -111,4 +111,26 @@
   height: 3px;
   background-color: rgba(0, 0, 0, 0.701);
   width: 90%;
+}
+
+/* pop-up compra */
+
+.popup {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(9, 152, 31);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 0;
+  font-weight: 500;
+}
+
+.popup > p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgb(255, 255, 255);
 }

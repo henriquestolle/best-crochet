@@ -1,14 +1,14 @@
 .item {
   width: 45vw;
   height: auto;
-  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.186);
+  box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.186);
 }
 
 .item > h3 {
   text-align: center;
 }
 
-.item > img {
+.img-item-display {
   width: 100%;
   height: 230px;
   border-radius: 15px;
@@ -27,26 +27,6 @@
   font-size: 18px;
 }
 
-/* Botão */
-.btn-item-buy {
-  margin: 10px 0px 0px 0px;
-  width: 100%;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: 600;
-  border-radius: 5px;
-  border: 0px none;
-  background-color: #f45366;
-  box-shadow: 1px 1px 0px 3px rgba(205, 219, 0, 0.801);
-  color: #ffffff;
-}
-
-.btn-item-buy:hover {
-  background-color: #f1233b;
-  box-shadow: 1px 1px 0px 3px rgb(175, 128, 12);
-  transition: 0.2s;
-}
-
 .preco-velho {
   margin: 0px 0px 0px 9px;
   font-size: 18px;
@@ -59,5 +39,5 @@
   margin: 0px 0px 0px 10px;
   font-size: 22px;
   font-weight: 700;
-  color: brown;
+  color: rgb(6, 54, 130);
 }

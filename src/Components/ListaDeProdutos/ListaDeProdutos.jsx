@@ -16,7 +16,7 @@ const ListaDeProdutos = () => {
   return (
     <div className="lista-produtos-main">
       <div className="conteudo">
-        <p className="conteudo-titulo">Produtos</p>
+        <p className="conteudo-titulo">Todos Produtos</p>
       </div>
       <div className="lista-de-produtos">
         {all_data.slice(0, produtosCarregados).map((product, i) => (
