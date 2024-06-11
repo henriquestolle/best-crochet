@@ -1,3 +1,4 @@
+/* Banner */
 .banner {
   margin: 16% 0% 0% 0%;
   text-align: center;
@@ -10,19 +11,49 @@
   box-shadow: 0px 1px 1px 2px rgba(114, 103, 103, 0.261);
 }
 
+/* Pesquisa */
 .search-item {
-  margin-top: 20px;
+  margin: 50px 0px -30px 0px;
   display: flex;
   justify-content: center;
   width: 100vw;
 }
+
 .search-item > input {
-  padding: 10px;
-  border-radius: 3px;
+  width: 95%;
+  padding: 15px;
+  border-radius: 15px;
   background-color: rgba(255, 235, 205, 0.477);
-  border: 1px solid grey;
+  border: 1px solid rgb(109, 114, 27);
 }
 
+/* Estilo para navegadores que suportam ::placeholder */
+::placeholder {
+  color: black; /* Altere a cor conforme necessário */
+  opacity: 1; /* Para garantir que a cor não fique transparente */
+}
+
+/* Estilo para navegadores WebKit (Chrome, Safari, Opera) */
+input::-webkit-input-placeholder {
+  color: black;
+}
+
+/* Estilo para Firefox */
+input::-moz-placeholder {
+  color: black;
+}
+
+/* Estilo para Internet Explorer 10-11 */
+input:-ms-input-placeholder {
+  color: black;
+}
+
+/* Estilo para Microsoft Edge */
+input::-ms-input-placeholder {
+  color: black;
+}
+
+/* Lista de Produtos */
 .lista-produtos-main > h1 {
   margin: 40px;
   text-align: center;
