@@ -18,7 +18,7 @@ const ListaDeProdutos = () => {
   const scrollToEndOfScreen = () => {
     const start = window.pageYOffset;
     const end = document.documentElement.scrollHeight - window.innerHeight;
-    const duration = 500;
+    const duration = 1000;
     const startTime = performance.now();
 
     const animateScroll = (currentTime) => {
@@ -49,7 +49,7 @@ const ListaDeProdutos = () => {
 
   return (
     <div className="lista-produtos-main">
-      <div className="banner" onClick={"scrollToEndOfScreen"}>
+      <div className="banner" onClick={scrollToEndOfScreen}>
         <img className="banner-img" src={banner} alt="banner" />
       </div>
       <div className="search-item">
