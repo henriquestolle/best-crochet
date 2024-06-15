@@ -12,7 +12,7 @@ body {
   z-index: 5;
   left: 0px;
   top: 0;
-  background-color: #f9f5f2;
+  background-color: #f4e3d7;
   box-shadow: 0px 1px 1px 1px rgba(146, 139, 139, 0.63);
   transition: top 0.3s;
   width: 100%;
@@ -25,13 +25,12 @@ body {
 .logo {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100%;
-  width: 100px;
 }
 
 .logo > img {
-  height: 90px;
+  width: 80px;
+  height: 80px;
 }
 
 /* Config. de menu Bar */
@@ -118,4 +117,18 @@ body {
 
 .sidebar.open {
   width: 250px; /* Largura do menu quando aberto */
+}
+
+@media (min-width: 370px) and (max-width: 380px) {
+  .logo > img {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+@media (min-width: 381px) {
+  .logo > img {
+    width: 90px;
+    height: 90px;
+  }
 }

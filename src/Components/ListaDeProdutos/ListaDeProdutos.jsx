@@ -54,7 +54,7 @@ const ListaDeProdutos = () => {
       </div>
       <div className="search-item">
         <input
-          placeholder="Pesquisar Nome do Produto..."
+          placeholder="Pesquisar Cor do Produto..."
           type="search"
           name="search"
           id="search"
@@ -62,8 +62,9 @@ const ListaDeProdutos = () => {
           onChange={handleSearchChange}
         />
       </div>
-      <div className="conteudo">
-        <p className="conteudo-titulo">Todos Produtos</p>
+      <div className="conteudos">
+        <p className="conteudos-titulo">Todos Produtos</p>
+        <div id="hr-estilizado"></div>
       </div>
       <div id="lista-de-produtos" className="lista-de-produtos">
         {produtosFiltrados.slice(0, produtosCarregados).map((product, i) => (

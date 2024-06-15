@@ -41,7 +41,7 @@ import img_bolsa_39 from "./img-bolsa-39.jpg";
 let all_data = [
   {
     id: 1,
-    name: "Bolsa Modelo Vermelho e Bege",
+    name: "Bolsa Vermelho e Bege",
     img: img_bolsa_01,
     new_price: 130,
     old_price: 159.99,
@@ -111,7 +111,7 @@ let all_data = [
   },
   {
     id: 8,
-    name: "Bolsa Rondonda Pequena Vermelho",
+    name: "Bolsa Bolinha Vermelho",
     img: img_bolsa_08,
     new_price: 123,
     old_price: 154.99,
