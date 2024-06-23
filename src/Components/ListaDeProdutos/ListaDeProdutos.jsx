@@ -3,10 +3,12 @@ import banner from "../Assets/banner_best_crochet.png";
 import { useState } from "react";
 import all_data from "../Assets/all_data";
 import Item from "../Item/Item";
+import Footer from "../Footer/Footer";
 
 const ListaDeProdutos = () => {
   const [produtosCarregados, setProdutosCarregados] = useState(8); // Inicialmente, carregar 8 produtos
   const [termoPesquisa, setTermoPesquisa] = useState(""); // Estado para o termo de pesquisa
+  const [filtro, setFiltro] = useState("alfabetica"); // Estado para o filtro
 
   const carregarMaisProdutos = () => {
     // Aumenta o número de produtos a serem carregados
@@ -43,26 +45,50 @@ const ListaDeProdutos = () => {
     setTermoPesquisa(sanitizedInput);
   };
 
-  const produtosFiltrados = all_data.filter((product) =>
-    product.name.toLowerCase().includes(termoPesquisa.toLowerCase())
-  );
+  const handleFiltroChange = (event) => {
+    setFiltro(event.target.value);
+  };
+
+  const produtosFiltrados = all_data
+    .filter((product) =>
+      product.name.toLowerCase().includes(termoPesquisa.toLowerCase())
+    )
+    .sort((a, b) => {
+      if (filtro === "alfabetica") {
+        return a.name.localeCompare(b.name);
+      } else if (filtro === "preco") {
+        return a.new_price - b.new_price;
+      }
+      return 0;
+    });
 
   return (
     <div className="lista-produtos-main">
       <div className="banner" onClick={scrollToEndOfScreen}>
         <img className="banner-img" src={banner} alt="banner" />
       </div>
-      <div className="search-item">
-        <input
-          placeholder="Pesquisar Cor do Produto..."
-          type="search"
-          name="search"
-          id="search"
-          value={termoPesquisa}
-          onChange={handleSearchChange}
-        />
+      <div id="font-search">
+        <p>Filtre os resultados</p>
       </div>
-      <div className="conteudos">
+      <div id="global-search">
+        <div className="filter-item">
+          <select value={filtro} onChange={handleFiltroChange}>
+            <option value="alfabetica">Ordem Alfabética</option>
+            <option value="preco">Preço</option>
+          </select>
+        </div>
+        <div className="search-item">
+          <input
+            placeholder="Pesquisar Cor do Produto"
+            type="search"
+            name="search"
+            id="search"
+            value={termoPesquisa}
+            onChange={handleSearchChange}
+          />
+        </div>
+      </div>
+      <div className="conteudos-geral-lista-produtos">
         <p className="conteudos-titulo">Todos Produtos</p>
         <div id="hr-estilizado"></div>
       </div>
@@ -79,10 +105,12 @@ const ListaDeProdutos = () => {
           />
         ))}
       </div>
-      {produtosCarregados < produtosFiltrados.length && (
+      {produtosCarregados < produtosFiltrados.length ? (
         <div className="btn-carregar-item">
           <button onClick={carregarMaisProdutos}>Ver Mais Produtos</button>
         </div>
+      ) : (
+        <Footer />
       )}
     </div>
   );
