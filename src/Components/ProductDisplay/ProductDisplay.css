@@ -51,7 +51,7 @@
 }
 
 .preco-velho-descricao {
-  margin: -10px 0px 0px -5px;
+  margin: -15px 0px 0px -55px;
   font-size: 1.1rem;
   text-decoration: line-through;
 }
@@ -73,7 +73,7 @@
 
 .qnt-livre {
   font-size: 1.1rem;
-  width: 80vw;
+  width: 100%;
 }
 
 .num-qnt-livre {

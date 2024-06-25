@@ -1,6 +1,6 @@
 import "./ListaDeProdutos.css";
 import banner from "../Assets/banner_best_crochet.png";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import all_data from "../Assets/all_data";
 import Item from "../Item/Item";
 import Footer from "../Footer/Footer";
@@ -8,7 +8,8 @@ import Footer from "../Footer/Footer";
 const ListaDeProdutos = () => {
   const [produtosCarregados, setProdutosCarregados] = useState(8); // Inicialmente, carregar 8 produtos
   const [termoPesquisa, setTermoPesquisa] = useState(""); // Estado para o termo de pesquisa
-  const [filtro, setFiltro] = useState("alfabetica"); // Estado para o filtro
+  const [filtro, setFiltro] = useState("sem filtro"); // Estado para o filtro
+  const scrollContainerRef = useRef(null);
 
   const carregarMaisProdutos = () => {
     // Aumenta o número de produtos a serem carregados
@@ -59,36 +60,78 @@ const ListaDeProdutos = () => {
       } else if (filtro === "preco") {
         return a.new_price - b.new_price;
       }
-      return;
+      return 0;
     });
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    let isScrolling = false;
+
+    const cloneItems = () => {
+      const items = scrollContainer.querySelectorAll(".scroll-item");
+      items.forEach((item) => {
+        const clone = item.cloneNode(true);
+        scrollContainer.appendChild(clone);
+      });
+    };
+
+    const handleScroll = () => {
+      if (!isScrolling) {
+        isScrolling = true;
+        const { scrollLeft, scrollWidth, clientWidth } = scrollContainer;
+        if (scrollLeft + clientWidth >= scrollWidth) {
+          scrollContainer.scrollLeft = 0;
+        } else {
+          scrollContainer.scrollBy({ left: 1, behavior: "smooth" });
+        }
+        isScrolling = false;
+      }
+    };
+
+    const scrollInterval = setInterval(handleScroll, 20);
+
+    cloneItems();
+    cloneItems(); // Clone twice for smooth transition
+
+    return () => clearInterval(scrollInterval);
+  }, []);
 
   return (
     <div className="lista-produtos-main">
       <div className="banner" onClick={scrollToEndOfScreen}>
         <img className="banner-img" src={banner} alt="banner" />
       </div>
-      <div id="font-search">
-        <p>Filtre os resultados</p>
-      </div>
-      <div id="global-search">
-        <div className="filter-item">
-          <select value={filtro} onChange={handleFiltroChange}>
-            <option value="sem filtro" selected>
-              Sem Filtro
-            </option>
-            <option value="alfabetica">Ordem Alfabética</option>
-            <option value="preco">Preço</option>
-          </select>
+      <div id="loop">
+        <div className="scroll-container" ref={scrollContainerRef}>
+          <div className="scroll-item">Crochê</div>
+          <div className="scroll-item">Bolsas</div>
+          <div className="scroll-item">Cestos</div>
+          <div className="scroll-item">Tocas</div>
+          <div className="scroll-item">Cachecol</div>
         </div>
-        <div className="search-item">
-          <input
-            placeholder="Pesquisar Cor do Produto"
-            type="search"
-            name="search"
-            id="search"
-            value={termoPesquisa}
-            onChange={handleSearchChange}
-          />
+      </div>
+      <div id="global-main-header">
+        <div id="font-search">
+          <p>Filtre os resultados</p>
+        </div>
+        <div id="global-search">
+          <div className="filter-item">
+            <select value={filtro} onChange={handleFiltroChange}>
+              <option value="sem filtro">Sem Filtro</option>
+              <option value="alfabetica">Ordem Alfabética</option>
+              <option value="preco">Preço</option>
+            </select>
+          </div>
+          <div className="search-item">
+            <input
+              placeholder="Pesquisar Cor do Produto"
+              type="search"
+              name="search"
+              id="search"
+              value={termoPesquisa}
+              onChange={handleSearchChange}
+            />
+          </div>
         </div>
       </div>
       <div className="conteudos-geral-lista-produtos">

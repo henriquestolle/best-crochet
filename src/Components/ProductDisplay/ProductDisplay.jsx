@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import all_data from "../Assets/all_data";
@@ -30,6 +30,11 @@ const ProductDisplay = () => {
       }, 3000); // Ajustei para 3 segundos
     }
   };
+
+  // useEffect para rolar a tela para o topo quando o componente é montado
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="product-display">
