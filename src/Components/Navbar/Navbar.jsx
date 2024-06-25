@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
+    <header className="navbar">
       <div className="menu-bar" onClick={toggleMenu}>
         &#9776; {/* Ícone de menu hambúrguer */}
       </div>
@@ -44,7 +44,7 @@ const Navbar = () => {
         </Link>
         <span className="qnt-itens-carrinho">{getTotalCartItems()}</span>
       </div>
-    </div>
+    </header>
   );
 };
 

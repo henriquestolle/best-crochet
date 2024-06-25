@@ -39,41 +39,53 @@ const ProductDisplay = () => {
         <div className="product-display-info">
           {/*  cima */}
           <div className="item-cima">
+            <p className="nome-produto-carrinho">{product.name}</p>
             <img
               className="product-img-display"
               src={product.img}
               alt="Imagem do Produto"
             />
           </div>
-          <p className="nome-produto-carrinho">{product.name}</p>
           <div className="descricao-produto-carrinho">
+            <div className="precos">
+              <p className="preco-produto-descricao">R$ {product.new_price}</p>
+              <p className="preco-velho-descricao">R$ {product.old_price}</p>
+            </div>
             <p className="qnt-livre">
               Quantidade Disponíveis:{" "}
               <span className="num-qnt-livre">{product.qnt}</span>
             </p>
-            <div className="precos">
-              <p className="preco-produto-descricao">R$ {product.new_price}</p>
-              <p className="preco-velho-descricao">R$ {product.old_price}</p>
-              <p className="promo">-20% OFF</p>
+            <div
+              className={`btn-baixo ${
+                product.qnt <= 0 ? "out-of-stock" : "in-stock"
+              }`}
+            >
+              <button
+                type="button"
+                onClick={() => handleAddToCart(product.id)}
+                disabled={product.qnt <= 0} // Desabilita o botão se a quantidade for 0 ou menos
+              >
+                {product.qnt <= 0
+                  ? "Produto Esgotado"
+                  : "Adicionar ao Carrinho"}
+                <img
+                  className="img-carrinho-btn"
+                  src={carrinho}
+                  alt="imagem carrinho"
+                />
+              </button>
             </div>
-            <p>{product.description}</p>
+            <div id="info-product-display">
+              <p className="qnt-livre">
+                Cor: <span className="num-qnt-livre">{product.color}</span>
+              </p>
+            </div>
           </div>
           <hr className="hr-produto" />
           {/* Parte de Baixo */}
-          <div className="btn-baixo">
-            <button
-              type="button"
-              onClick={() => handleAddToCart(product.id)}
-              disabled={product.qnt <= 0} // Desabilita o botão se a quantidade for 0 ou menos
-            >
-              Adicionar ao Carrinho{" "}
-              <img
-                className="img-carrinho-btn"
-                src={carrinho}
-                alt="imagem carrinho"
-              />
-            </button>
-          </div>
+          <p id="description">
+            <strong>Descrição do Produto:</strong> {product.description}
+          </p>
         </div>
       )}
       {showPopup && (

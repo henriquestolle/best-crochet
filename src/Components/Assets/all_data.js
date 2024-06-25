@@ -46,7 +46,7 @@ let all_data = [
     new_price: 130,
     old_price: 159.99,
     qnt: 1,
-    color: "Cor",
+    color: "Vermelho e Bege",
     size: "25x40cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
@@ -58,7 +58,7 @@ let all_data = [
     new_price: 120,
     old_price: 149.99,
     qnt: 1,
-    color: "Cor",
+    color: "Amarela e Bege",
     size: "25x40cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
@@ -70,7 +70,7 @@ let all_data = [
     new_price: 100,
     old_price: 129.99,
     qnt: 1,
-    color: "Cor",
+    color: "Roxa",
     size: "25x40cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
@@ -82,7 +82,7 @@ let all_data = [
     new_price: 150,
     old_price: 179.99,
     qnt: 1,
-    color: "Cor",
+    color: "Azul e Vermelho - Misto",
     size: "25x40cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
@@ -106,7 +106,7 @@ let all_data = [
     new_price: 105,
     old_price: 134.99,
     qnt: 1,
-    color: "Cor",
+    color: "Azul",
     size: "25x40cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",

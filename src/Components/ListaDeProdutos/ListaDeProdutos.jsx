@@ -59,7 +59,7 @@ const ListaDeProdutos = () => {
       } else if (filtro === "preco") {
         return a.new_price - b.new_price;
       }
-      return 0;
+      return;
     });
 
   return (
@@ -73,6 +73,9 @@ const ListaDeProdutos = () => {
       <div id="global-search">
         <div className="filter-item">
           <select value={filtro} onChange={handleFiltroChange}>
+            <option value="sem filtro" selected>
+              Sem Filtro
+            </option>
             <option value="alfabetica">Ordem Alfabética</option>
             <option value="preco">Preço</option>
           </select>
