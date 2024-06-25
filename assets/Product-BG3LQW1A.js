@@ -1,1 +1,0 @@
-import{j as o}from"./index-C7r7dYh2.js";import{F as s}from"./Footer-mqJMpC1A.js";import{N as r}from"./Navbar-BUeDb1yT.js";import{L as t}from"./ListaDeProdutos--F36qQVr.js";const j=()=>o.jsxs("div",{children:[o.jsx(r,{}),o.jsxs("p",{className:"pagination",children:["Home ",">"," Loja ",">"," Produtos"]}),o.jsx(t,{}),o.jsx(s,{})]});export{j as default};
