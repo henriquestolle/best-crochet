@@ -70,6 +70,12 @@
   border: 1px solid rgb(109, 114, 27);
   color: rgb(0, 0, 0);
   font-size: 11px;
+  -webkit-appearance: none; /* Remove a aparência padrão do iOS */
+  -moz-appearance: none; /* Remove a aparência padrão do Firefox */
+  appearance: none; /* Remove a aparência padrão */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI2Ij4gICAgPHBhdGggZD0iTTAsMmgwbDUsNWw1LTVaIiBmaWxsPSIjMDAwIiAvPiAgICAKPC9zdmc+");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
 }
 
 /* Estilo para navegadores que suportam ::placeholder */

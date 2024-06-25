@@ -65,7 +65,6 @@ const ListaDeProdutos = () => {
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current;
-    let isScrolling = false;
 
     const cloneItems = () => {
       const items = scrollContainer.querySelectorAll(".scroll-item");
@@ -76,19 +75,15 @@ const ListaDeProdutos = () => {
     };
 
     const handleScroll = () => {
-      if (!isScrolling) {
-        isScrolling = true;
-        const { scrollLeft, scrollWidth, clientWidth } = scrollContainer;
-        if (scrollLeft + clientWidth >= scrollWidth) {
-          scrollContainer.scrollLeft = 0;
-        } else {
-          scrollContainer.scrollBy({ left: 1, behavior: "smooth" });
-        }
-        isScrolling = false;
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainer;
+      if (scrollLeft + clientWidth >= scrollWidth) {
+        scrollContainer.scrollLeft = 0;
+      } else {
+        scrollContainer.scrollLeft += 1; // Ajuste a velocidade do scroll
       }
     };
 
-    const scrollInterval = setInterval(handleScroll, 20);
+    const scrollInterval = setInterval(handleScroll, 10); // Ajuste o intervalo do scroll
 
     cloneItems();
     cloneItems(); // Clone twice for smooth transition
