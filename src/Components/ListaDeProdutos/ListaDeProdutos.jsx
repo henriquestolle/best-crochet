@@ -1,5 +1,8 @@
 import "./ListaDeProdutos.css";
-import banner from "../Assets/banner_best_crochet.png";
+import banner_1 from "../Assets/banner_best_crochet.png_1.jpg";
+import banner_2 from "../Assets/banner_best_crochet.png_2.jpg";
+import banner_3 from "../Assets/banner_best_crochet.png_3.jpg";
+import banner_4 from "../Assets/banner_best_crochet.png_4.jpg";
 import { useState, useEffect, useRef } from "react";
 import all_data from "../Assets/all_data";
 import Item from "../Item/Item";
@@ -10,6 +13,16 @@ const ListaDeProdutos = () => {
   const [termoPesquisa, setTermoPesquisa] = useState(""); // Estado para o termo de pesquisa
   const [filtro, setFiltro] = useState("sem filtro"); // Estado para o filtro
   const scrollContainerRef = useRef(null);
+  const banners = [banner_1, banner_2, banner_3, banner_4];
+  const [currentBanner, setCurrentBanner] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBanner((prevBanner) => (prevBanner + 1) % banners.length);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, [banners.length]);
 
   const carregarMaisProdutos = () => {
     // Aumenta o número de produtos a serem carregados
@@ -40,12 +53,6 @@ const ListaDeProdutos = () => {
     requestAnimationFrame(animateScroll);
   };
 
-  const handleSearchChange = (event) => {
-    // Sanitizar o input para evitar ataques XSS
-    const sanitizedInput = event.target.value.replace(/<[^>]*>?/gm, "");
-    setTermoPesquisa(sanitizedInput);
-  };
-
   const handleFiltroChange = (event) => {
     setFiltro(event.target.value);
   };
@@ -63,52 +70,27 @@ const ListaDeProdutos = () => {
       return 0;
     });
 
-  useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-
-    const cloneItems = () => {
-      const items = scrollContainer.querySelectorAll(".scroll-item");
-      items.forEach((item) => {
-        const clone = item.cloneNode(true);
-        scrollContainer.appendChild(clone);
-      });
-    };
-
-    const handleScroll = () => {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainer;
-      if (scrollLeft + clientWidth >= scrollWidth) {
-        scrollContainer.scrollLeft = 0;
-      } else {
-        scrollContainer.scrollLeft += 1; // Ajuste a velocidade do scroll
-      }
-    };
-
-    const scrollInterval = setInterval(handleScroll, 10); // Ajuste o intervalo do scroll
-
-    cloneItems();
-    cloneItems(); // Clone twice for smooth transition
-
-    return () => clearInterval(scrollInterval);
-  }, []);
-
   return (
     <div className="lista-produtos-main">
-      <div className="banner" onClick={scrollToEndOfScreen}>
-        <img className="banner-img" src={banner} alt="banner" />
-      </div>
-      <div id="loop">
-        <div className="scroll-container" ref={scrollContainerRef}>
-          <div className="scroll-item">Crochê</div>
-          <div className="scroll-item">Bolsas</div>
-          <div className="scroll-item">Cestos</div>
-          <div className="scroll-item">Tocas</div>
-          <div className="scroll-item">Cachecol</div>
+      <div className="banner-container" onClick={scrollToEndOfScreen}>
+        <img className="banner-img" src={banners[currentBanner]} alt="banner" />
+        <div className="banner-indicators">
+          {banners.map((_, index) => (
+            <span
+              key={index}
+              className={`indicator ${index === currentBanner ? "active" : ""}`}
+            ></span>
+          ))}
         </div>
+      </div>
+      {/* Breadcrumb */}
+      <nav className="breadcrumb-home">
+        <span>Home</span>
+      </nav>
+      <div id="text-crochet">
+        <p>crochet</p>
       </div>
       <div id="global-main-header">
-        <div id="font-search">
-          <p>Filtre os resultados</p>
-        </div>
         <div id="global-search">
           <div className="filter-item">
             <select value={filtro} onChange={handleFiltroChange}>
@@ -116,16 +98,6 @@ const ListaDeProdutos = () => {
               <option value="alfabetica">Ordem Alfabética</option>
               <option value="preco">Preço</option>
             </select>
-          </div>
-          <div className="search-item">
-            <input
-              placeholder="Pesquisar Cor do Produto"
-              type="search"
-              name="search"
-              id="search"
-              value={termoPesquisa}
-              onChange={handleSearchChange}
-            />
           </div>
         </div>
       </div>

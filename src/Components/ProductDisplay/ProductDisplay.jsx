@@ -27,7 +27,7 @@ const ProductDisplay = () => {
       setShowPopup(true);
       setTimeout(() => {
         setShowPopup(false);
-      }, 3000); // Ajustei para 3 segundos
+      }, 2000); // Ajustei para 2 segundos
     }
   };
 
@@ -40,55 +40,57 @@ const ProductDisplay = () => {
     <div className="product-display">
       <Navbar />
       {product && (
-        // Geral
         <div className="product-display-info">
-          {/*  cima */}
-          <div className="item-cima">
-            <p className="nome-produto-carrinho">{product.name}</p>
-            <img
-              className="product-img-display"
-              src={product.img}
-              alt="Imagem do Produto"
-            />
-          </div>
-          <div className="descricao-produto-carrinho">
-            <div className="precos">
-              <p className="preco-produto-descricao">R$ {product.new_price}</p>
-              <p className="preco-velho-descricao">R$ {product.old_price}</p>
+          <div className="product-container">
+            <div className="product-img-section">
+              <img
+                className="product-img-display"
+                src={product.img}
+                alt="Imagem do Produto"
+              />
+              {product.desconto > 0 && (
+                <div className="desconto">{product.desconto}% OFF</div>
+              )}
             </div>
-            <p className="qnt-livre">
-              Quantidade Disponíveis:{" "}
-              <span className="num-qnt-livre">{product.qnt}</span>
-            </p>
-            <div
-              className={`btn-baixo ${
-                product.qnt <= 0 ? "out-of-stock" : "in-stock"
-              }`}
-            >
+            {/* Breadcrumb */}
+            <nav className="breadcrumb">
+              <span>Home</span> &gt; <span>Bolsas</span> &gt;{" "}
+              <span>{product.name}</span>
+            </nav>
+            <div className="product-details-section">
+              <h1 className="product-name">{product.name}</h1>
+              <div className="product-prices">
+                <div id="product-prices-text">
+                  <span className="old-price">R${product.old_price}</span>
+                  <span className="new-price">R${product.new_price}</span>
+                  <span className="installments">
+                    2x de R$
+                    {(product.new_price / 2).toFixed(2).replace(".", ",")}
+                  </span>
+                </div>
+              </div>
+              <div className="stock-info">{product.qnt} em estoque</div>
               <button
-                type="button"
+                className={`buy-button ${
+                  product.qnt <= 0 ? "out-of-stock" : "in-stock"
+                }`}
                 onClick={() => handleAddToCart(product.id)}
-                disabled={product.qnt <= 0} // Desabilita o botão se a quantidade for 0 ou menos
+                disabled={product.qnt <= 0}
               >
                 {product.qnt <= 0
                   ? "Produto Esgotado"
                   : "Adicionar ao Carrinho"}
                 <img
-                  className="img-carrinho-btn"
+                  className="cart-icon"
                   src={carrinho}
                   alt="imagem carrinho"
                 />
               </button>
             </div>
-            <div id="info-product-display">
-              <p className="qnt-livre">
-                Cor: <span className="num-qnt-livre">{product.color}</span>
-              </p>
-            </div>
           </div>
-          <hr className="hr-produto" />
-          {/* Parte de Baixo */}
-          <p id="description">
+
+          <hr className="separator" />
+          <p className="product-description">
             <strong>Descrição do Produto:</strong> {product.description}
           </p>
         </div>

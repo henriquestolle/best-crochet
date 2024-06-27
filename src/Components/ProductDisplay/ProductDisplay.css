@@ -1,142 +1,169 @@
 .product-display {
-  gap: 55px;
-  margin: 70px 0px 0px 0px;
+  margin: 40px 0;
 }
 
-/* Geral */
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
 .product-display-info {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Cima */
-.item-cima {
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+}
+
+.product-img-section {
+  width: 100%;
+  text-align: center;
+  position: relative;
 }
 
 .product-img-display {
   width: 100%;
+  object-fit: cover;
 }
 
-/* Baixo */
-
-/* nome do produto */
-
-.nome-produto-carrinho {
-  margin: 120px 0px 0px 10px;
-  text-align: left;
-  font-weight: 500;
-  font-size: 1.6rem;
+.desconto {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff4d4f;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
 }
 
-/* Descrição */
-.descricao-produto-carrinho {
+.product-details-section {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
-  margin: 10px;
+  padding: 10px;
+  margin-top: 20px;
 }
 
-/* Preços */
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
 
-.precos {
+.product-prices {
   display: flex;
-  justify-content: left;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
 }
 
-.preco-produto-descricao {
-  font-size: 2rem;
-  font-weight: 500;
-  color: rgb(0, 0, 0);
+#product-prices-text {
+  display: flex;
+  gap: 10px;
 }
 
-.preco-velho-descricao {
-  margin: -15px 0px 0px -55px;
-  font-size: 1.1rem;
+.old-price {
   text-decoration: line-through;
+  color: #888;
 }
 
-/* Info produto */
-#info-product-display {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  background: #eee;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
+.new-price {
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.qnt-livre {
-  font-size: 1.1rem;
-  width: 100%;
+.installments {
+  font-size: 0.9rem;
+  color: #555;
 }
 
-.num-qnt-livre {
-  font-size: 1.1rem;
-  color: rgb(0, 0, 0);
-  font-weight: 500;
+.stock-info {
+  color: #555;
 }
 
-/* Botão */
-.btn-baixo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.btn-baixo.out-of-stock > button {
+.buy-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  padding: 15px;
-  width: 100%;
-  color: white;
-  background-color: #5f5f5fd4;
-  font-size: 1.1rem;
-  border: 0px none;
-  border-radius: 5px;
-}
-
-.btn-baixo.in-stock > button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  padding: 15px;
-  width: 100%;
+  gap: 10px;
+  padding: 10px 20px;
   color: white;
   background-color: #007bff;
   font-size: 1.1rem;
-  border: 0px none;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
 }
 
-.btn-baixo.in-stock > button:hover {
+.buy-button.out-of-stock {
+  background-color: #5f5f5fd4;
+}
+
+.buy-button.out-of-stock:hover {
+  background-color: #4d4d4dd4;
+  transition: 0.2s;
+}
+
+.buy-button:hover {
   background-color: #046fe2;
   transition: 0.2s;
 }
 
-.img-carrinho-btn {
+.cart-icon {
+  width: 20px;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1000%)
     contrast(1000%);
-  width: 35px;
 }
 
-/* hr produto */
-.hr-produto {
+.additional-info {
+  width: 100%;
+}
+
+.additional-info details {
+  margin-bottom: 10px;
+}
+
+.additional-info summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.social-links a:hover {
+  color: #555;
+}
+
+.separator {
   margin: 30px auto;
   height: 3px;
-  background-color: rgba(0, 0, 0, 0.701);
-  width: 90%;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
 }
-
-/* pop-up compra */
 
 .popup {
   position: fixed;
@@ -158,8 +185,7 @@
   color: rgb(255, 255, 255);
 }
 
-/* description */
-
-#description {
+.product-description {
   margin: 10px;
+  text-align: center;
 }
