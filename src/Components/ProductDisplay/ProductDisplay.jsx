@@ -1,75 +1,66 @@
 import React, { useEffect, useContext, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import all_data from "../Assets/all_data";
 import "./ProductDisplay.css";
 import Footer from "../../Components/Footer/Footer";
-import carrinho from "../Assets/carrinho-de-compras.png";
 import { ShopContext } from "../../Context/ShopContext";
 
 const ProductDisplay = () => {
   const { productId } = useParams();
   const { addToCart } = useContext(ShopContext);
 
-  // Estado para o pop-up
   const [showPopup, setShowPopup] = useState(false);
 
-  // Converta productId para um número
   const productIdNumber = parseInt(productId);
-
-  // Encontre o produto correspondente com base no productIdNumber
   const product = all_data.find((product) => product.id === productIdNumber);
 
-  // Função para mostrar o pop-up e reduzir a quantidade
   const handleAddToCart = (id) => {
     if (product.qnt > 0) {
       addToCart(id);
       setShowPopup(true);
       setTimeout(() => {
         setShowPopup(false);
-      }, 2000); // Ajustei para 2 segundos
+      }, 2000);
     }
   };
 
-  // useEffect para rolar a tela para o topo quando o componente é montado
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [productId]);
+
+  // Filtrar produtos relacionados
+  const relatedProducts = all_data.filter(
+    (item) => item.id !== productIdNumber
+  );
+
+  // Selecionar até 4 produtos aleatórios
+  const getRandomRelatedProducts = (products, count) => {
+    const shuffled = [...products].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  };
+
+  const displayedRelatedProducts = getRandomRelatedProducts(relatedProducts, 2);
 
   return (
     <div className="product-display">
       <Navbar />
       {product && (
         <div className="product-display-info">
+          <nav className="breadcrumb">
+            <span>Início</span> &gt; <span>Bolos</span> &gt;{" "}
+            <span>{product.name}</span>
+          </nav>
           <div className="product-container">
-            <div className="product-img-section">
-              <img
-                className="product-img-display"
-                src={product.img}
-                alt="Imagem do Produto"
-              />
-              {product.desconto > 0 && (
-                <div className="desconto">{product.desconto}% OFF</div>
-              )}
-            </div>
-            {/* Breadcrumb */}
-            <nav className="breadcrumb">
-              <span>Home</span> &gt; <span>Bolsas</span> &gt;{" "}
-              <span>{product.name}</span>
-            </nav>
+            <img
+              className="product-img-display"
+              src={product.img}
+              alt="Imagem do Produto"
+            />
             <div className="product-details-section">
               <h1 className="product-name">{product.name}</h1>
-              <div className="product-prices">
-                <div id="product-prices-text">
-                  <span className="old-price">R${product.old_price}</span>
-                  <span className="new-price">R${product.new_price}</span>
-                  <span className="installments">
-                    2x de R$
-                    {(product.new_price / 2).toFixed(2).replace(".", ",")}
-                  </span>
-                </div>
-              </div>
-              <div className="stock-info">{product.qnt} em estoque</div>
+              <p className="price">R${product.new_price}</p>
+              <p className="price">Em Estoque: {product.qnt}</p>
               <button
                 className={`buy-button ${
                   product.qnt <= 0 ? "out-of-stock" : "in-stock"
@@ -77,22 +68,41 @@ const ProductDisplay = () => {
                 onClick={() => handleAddToCart(product.id)}
                 disabled={product.qnt <= 0}
               >
-                {product.qnt <= 0
-                  ? "Produto Esgotado"
-                  : "Adicionar ao Carrinho"}
-                <img
-                  className="cart-icon"
-                  src={carrinho}
-                  alt="imagem carrinho"
-                />
+                Comprar
               </button>
+              <div className="description">
+                <h2>Descrição</h2>
+                <p>{product.description}</p>
+              </div>
             </div>
           </div>
-
           <hr className="separator" />
-          <p className="product-description">
-            <strong>Descrição do Produto:</strong> {product.description}
-          </p>
+          <div className="related-products">
+            <h2>Produtos Relacionados</h2>
+            <div className="products-list">
+              {displayedRelatedProducts.map((relatedProduct) => (
+                <div className="product-card" key={relatedProduct.id}>
+                  <Link
+                    to={`/product/${relatedProduct.id}`}
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    <img src={relatedProduct.img} alt={relatedProduct.name} />
+                    <p>{relatedProduct.name}</p>
+                    <p className="price">R${relatedProduct.new_price}</p>
+                    <button
+                      className="buy-button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleAddToCart(relatedProduct.id);
+                      }}
+                    >
+                      Comprar
+                    </button>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
       {showPopup && (
