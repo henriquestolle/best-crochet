@@ -81,7 +81,7 @@ const ProductDisplay = () => {
             <h2>Produtos Relacionados</h2>
             <div className="products-list">
               {displayedRelatedProducts.map((relatedProduct) => (
-                <div className="product-card" key={relatedProduct.id}>
+                <div className="product-card-releted" key={relatedProduct.id}>
                   <Link
                     to={`/product/${relatedProduct.id}`}
                     onClick={() => window.scrollTo(0, 0)}
@@ -90,7 +90,7 @@ const ProductDisplay = () => {
                     <p>{relatedProduct.name}</p>
                     <p className="price">R${relatedProduct.new_price}</p>
                     <button
-                      className="buy-button"
+                      className="buy-button-related"
                       onClick={(e) => {
                         e.preventDefault();
                         handleAddToCart(relatedProduct.id);
