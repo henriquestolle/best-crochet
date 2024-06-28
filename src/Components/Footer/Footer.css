@@ -1,79 +1,42 @@
 .footer {
-  background-color: #d9d9d998;
-  padding: 20px;
-  word-wrap: break-word;
+  margin-top: 80px;
+  background-color: #fb4d8a;
+  color: white;
+  padding: 40px 0;
   text-align: center;
+}
+
+.footer .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .footer p {
   margin: 10px 0;
 }
 
-.footer-section {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.footer .menu,
+.footer .categorias,
+.footer .contato {
+  margin: 20px 0;
 }
 
-.footer-section div {
-  flex: 1;
-  margin: 10px;
-}
-
-.company-info img {
-  width: 150px;
-}
-
-.company-info p,
-.institutional p,
-.services p,
-.security p,
-.payment-methods p {
-  font-weight: bold;
-}
-
-.institutional ul,
-.services ul,
-.product-links ul,
-.product-types ul,
-.special-offers ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.institutional ul li,
-.services ul li,
-.product-links ul li,
-.product-types ul li,
-.special-offers ul li {
+.footer .menu a,
+.footer .categorias a {
+  color: white;
+  text-decoration: none;
+  display: block;
   margin: 5px 0;
 }
 
-.social-media img,
-.security-logos img,
-.payment-logos img {
-  width: 30px;
-  margin: 0 5px;
+.footer .contato p {
+  margin: 5px 0;
 }
 
-.footer-links {
-  margin-top: 20px;
-}
-
-.footer-links div {
-  margin-bottom: 10px;
-}
-
-.footer-links p {
-  font-weight: bold;
-}
-
-.footer-links ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.footer-links ul li {
-  display: inline;
+.footer .contato i {
   margin-right: 10px;
 }

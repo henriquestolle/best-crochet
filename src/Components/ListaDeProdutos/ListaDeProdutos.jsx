@@ -9,7 +9,6 @@ import Item from "../Item/Item";
 import Footer from "../Footer/Footer";
 
 const ListaDeProdutos = () => {
-  const [produtosCarregados, setProdutosCarregados] = useState(8); // Inicialmente, carregar 8 produtos
   const [termoPesquisa, setTermoPesquisa] = useState(""); // Estado para o termo de pesquisa
   const [filtro, setFiltro] = useState("sem filtro"); // Estado para o filtro
   const scrollContainerRef = useRef(null);
@@ -23,13 +22,6 @@ const ListaDeProdutos = () => {
 
     return () => clearInterval(interval);
   }, [banners.length]);
-
-  const carregarMaisProdutos = () => {
-    // Aumenta o número de produtos a serem carregados
-    setProdutosCarregados(
-      (prevProdutosCarregados) => prevProdutosCarregados + 4
-    );
-  };
 
   const scrollToEndOfScreen = () => {
     const start = window.pageYOffset;
@@ -95,18 +87,20 @@ const ListaDeProdutos = () => {
           <div className="filter-item">
             <select value={filtro} onChange={handleFiltroChange}>
               <option value="sem filtro">Sem Filtro</option>
-              <option value="alfabetica">Ordem Alfabética</option>
-              <option value="preco">Preço</option>
+              <option value="alfabetica">Order Alfabética</option>
+              <option value="preco">Ordenar Por Preço</option>
             </select>
           </div>
         </div>
       </div>
       <div className="conteudos-geral-lista-produtos">
         <p className="conteudos-titulo">Todos Produtos</p>
-        <div id="hr-estilizado"></div>
+        <p id="texto-exibindo">
+          Exibindo {produtosFiltrados.length} resultados
+        </p>
       </div>
       <div id="lista-de-produtos" className="lista-de-produtos">
-        {produtosFiltrados.slice(0, produtosCarregados).map((product, i) => (
+        {produtosFiltrados.map((product, i) => (
           <Item
             id={product.id}
             key={i}
@@ -118,13 +112,7 @@ const ListaDeProdutos = () => {
           />
         ))}
       </div>
-      {produtosCarregados < produtosFiltrados.length ? (
-        <div className="btn-carregar-item">
-          <button onClick={carregarMaisProdutos}>Ver Mais Produtos</button>
-        </div>
-      ) : (
-        <Footer />
-      )}
+      <Footer />
     </div>
   );
 };
