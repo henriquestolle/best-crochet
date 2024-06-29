@@ -74,6 +74,21 @@ a {
   align-self: flex-end; /* Garante que o botão esteja alinhado à direita, se necessário */
 }
 
+.out-of-stock {
+  background-color: #565454;
+  color: #fff;
+  width: 100%;
+  padding: 20px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end; /* Garante que o botão esteja alinhado à direita, se necessário */
+}
+
 .buy-button-releted:hover {
   background-color: #565555;
   transition: 0.2s;
@@ -139,7 +154,7 @@ a {
 
 .popup {
   position: fixed;
-  bottom: 20px;
+  bottom: 120px;
   right: 20px;
   background-color: #333;
   color: #fff;

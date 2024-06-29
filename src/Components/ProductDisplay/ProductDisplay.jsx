@@ -61,15 +61,16 @@ const ProductDisplay = () => {
               <h1 className="product-name">{product.name}</h1>
               <p className="price">R${product.new_price}</p>
               <p className="price">Em Estoque: {product.qnt}</p>
-              <button
-                className={`buy-button ${
-                  product.qnt <= 0 ? "out-of-stock" : "in-stock"
-                }`}
-                onClick={() => handleAddToCart(product.id)}
-                disabled={product.qnt <= 0}
-              >
-                Comprar
-              </button>
+              {product.qnt > 0 ? (
+                <button
+                  className="buy-button in-stock"
+                  onClick={() => handleAddToCart(product.id)}
+                >
+                  Comprar
+                </button>
+              ) : (
+                <p className="out-of-stock">Esgotado</p>
+              )}
               <div className="description">
                 <h2>Descrição</h2>
                 <p>{product.description}</p>
@@ -89,15 +90,19 @@ const ProductDisplay = () => {
                     <img src={relatedProduct.img} alt={relatedProduct.name} />
                     <p>{relatedProduct.name}</p>
                     <p className="price">R${relatedProduct.new_price}</p>
-                    <button
-                      className="buy-button-related"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleAddToCart(relatedProduct.id);
-                      }}
-                    >
-                      Comprar
-                    </button>
+                    {relatedProduct.qnt > 0 ? (
+                      <button
+                        className="buy-button-related"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleAddToCart(relatedProduct.id);
+                        }}
+                      >
+                        Comprar
+                      </button>
+                    ) : (
+                      <p className="out-of-stock">Esgotado</p>
+                    )}
                   </Link>
                 </div>
               ))}
