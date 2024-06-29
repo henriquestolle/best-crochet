@@ -91,15 +91,7 @@ const ProductDisplay = () => {
                     <p>{relatedProduct.name}</p>
                     <p className="price">R${relatedProduct.new_price}</p>
                     {relatedProduct.qnt > 0 ? (
-                      <button
-                        className="buy-button-related"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleAddToCart(relatedProduct.id);
-                        }}
-                      >
-                        Comprar
-                      </button>
+                      <button className="buy-button-related">Comprar</button>
                     ) : (
                       <p className="out-of-stock">Esgotado</p>
                     )}
