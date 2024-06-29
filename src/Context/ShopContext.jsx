@@ -1,4 +1,5 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
+import Cookies from "js-cookie";
 import all_data from "../Components/Assets/all_data";
 
 export const ShopContext = createContext(null);
@@ -14,8 +15,22 @@ const getDefaultCart = () => {
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
+  // Carrega os itens do carrinho quando o context é iniciado
+  useEffect(() => {
+    const savedCartItems = JSON.parse(Cookies.get("cartItems") || "{}");
+    setCartItems(savedCartItems);
+  }, []);
+
+  const saveCartItemsToCookies = (items) => {
+    Cookies.set("cartItems", JSON.stringify(items), { expires: 7 });
+  };
+
   const addToCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    setCartItems((prev) => {
+      const updatedItems = { ...prev, [itemId]: prev[itemId] + 1 };
+      saveCartItemsToCookies(updatedItems);
+      return updatedItems;
+    });
     // Decrease the quantity in all_data
     const product = all_data.find((product) => product.id === itemId);
     if (product && product.qnt > 0) {
@@ -26,19 +41,20 @@ const ShopContextProvider = (props) => {
   const removeFromCart = (itemId) => {
     setCartItems((prev) => {
       if (prev[itemId] > 0) {
-        const newCartItems = { ...prev, [itemId]: prev[itemId] - 1 };
+        const updatedItems = { ...prev, [itemId]: prev[itemId] - 1 };
+        saveCartItemsToCookies(updatedItems);
         // Increase the quantity in all_data
         const product = all_data.find((product) => product.id === itemId);
         if (product) {
           product.qnt += 1;
         }
-        return newCartItems;
+        return updatedItems;
       }
       return prev;
     });
   };
 
-  // Preço Total (TEM QUE TERMINAR)
+  // Preço Total
   const getTotalCartAmount = () => {
     let totalAmount = 0;
     for (const item in cartItems) {

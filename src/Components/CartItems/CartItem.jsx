@@ -1,3 +1,5 @@
+// CartItem.jsx
+
 import { ShopContext } from "../../Context/ShopContext";
 import "./CarItem.css";
 import React, { useContext } from "react";
@@ -15,6 +17,22 @@ const CartItem = () => {
       }, 0)
       .toFixed(2);
   };
+
+  const createWhatsAppMessage = () => {
+    let message = "Olá, tenho interesse nos seguintes produtos:\n";
+
+    all_data.forEach((item) => {
+      if (cartItems[item.id] > 0) {
+        message += `${item.name} - Quantidade: ${cartItems[item.id]}\n`;
+      }
+    });
+
+    message += `\nTotal: R$${calculateTotal()}\n`;
+
+    return encodeURIComponent(message);
+  };
+
+  const whatsappUrl = `https://wa.me/5547988883180?text=${createWhatsAppMessage()}`;
 
   return (
     <div className="cart-container">
@@ -82,9 +100,14 @@ const CartItem = () => {
             </div>
             <div className="cart-actions">
               <button className="cart-apply-voucher">Aplicar Voucher</button>
-              <Link to="/checkout" className="cart-checkout-button">
-                Continuar para o Checkout
-              </Link>
+              <a
+                href={whatsappUrl}
+                className="cart-checkout-button"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Finalizar Pedido via WhatsApp
+              </a>
             </div>
           </div>
         )}

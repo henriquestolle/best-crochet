@@ -2,6 +2,8 @@ import React, { lazy, Suspense } from "react";
 import "./Pages/CSS/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Carregando from "../src/Components/Carregando/Carregando";
+import WhatsAppButton from "./Components/WhatsAppButton/WhatsAppButton";
+import CookiesConsent from "./Components/CookiesConsent/CookiesConsent"; // Importando o componente CookieConsent
 
 const LandingPage = lazy(() => import("./Pages/LandingPage"));
 const Shop = lazy(() => import("../src/Pages/Shop"));
@@ -29,6 +31,8 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <WhatsAppButton />
+          <CookiesConsent />
         </Suspense>
       </BrowserRouter>
     </div>

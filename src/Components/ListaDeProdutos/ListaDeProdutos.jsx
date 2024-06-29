@@ -18,7 +18,7 @@ const ListaDeProdutos = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBanner((prevBanner) => (prevBanner + 1) % banners.length);
-    }, 2500);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [banners.length]);

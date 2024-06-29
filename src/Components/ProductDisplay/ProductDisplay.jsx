@@ -84,7 +84,7 @@ const ProductDisplay = () => {
                 <div className="product-card-releted" key={relatedProduct.id}>
                   <Link
                     to={`/product/${relatedProduct.id}`}
-                    onClick={() => window.scrollTo(0, 0)}
+                    onClick={() => window.scrollTo(0, 0)} // Subir topo da tela
                   >
                     <img src={relatedProduct.img} alt={relatedProduct.name} />
                     <p>{relatedProduct.name}</p>
