@@ -18,8 +18,15 @@ const ShopContextProvider = (props) => {
   // Carrega os itens do carrinho quando o context é iniciado
   useEffect(() => {
     const savedCartItems = JSON.parse(Cookies.get("cartItems") || "{}");
-    setCartItems(savedCartItems);
+    setCartItems((prevCartItems) => ({
+      ...prevCartItems,
+      ...savedCartItems,
+    }));
   }, []);
+
+  useEffect(() => {
+    saveCartItemsToCookies(cartItems);
+  }, [cartItems]);
 
   const saveCartItemsToCookies = (items) => {
     Cookies.set("cartItems", JSON.stringify(items), { expires: 7 });
