@@ -1,14 +1,16 @@
-// CartItem.jsx
-
 import { ShopContext } from "../../Context/ShopContext";
 import "./CarItem.css";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import excluir_icon from "../Assets/remover-icon.png";
 
 const CartItem = () => {
   const { all_data, cartItems, removeFromCart } = useContext(ShopContext);
   const hasItemsInCart = all_data.some((e) => cartItems[e.id] > 0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const calculateTotal = () => {
     return all_data
