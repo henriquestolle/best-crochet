@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import { useSwipeable } from "react-swipeable";
 import "./ListaDeProdutos.css";
 import banner_1 from "../Assets/banner_best_crochet.png_1.jpg";
 import banner_2 from "../Assets/banner_best_crochet.png_2.jpg";
@@ -12,7 +13,6 @@ import { Helmet } from "react-helmet";
 const ListaDeProdutos = () => {
   const [termoPesquisa, setTermoPesquisa] = useState(""); // Estado para o termo de pesquisa
   const [filtro, setFiltro] = useState("sem filtro"); // Estado para o filtro
-  const scrollContainerRef = useRef(null);
   const banners = [banner_1, banner_2, banner_3, banner_4];
   const [currentBanner, setCurrentBanner] = useState(0);
 
@@ -27,6 +27,23 @@ const ListaDeProdutos = () => {
   const handleFiltroChange = (event) => {
     setFiltro(event.target.value);
   };
+
+  const handleSwipe = (deltaX) => {
+    if (deltaX > 0) {
+      setCurrentBanner((prevBanner) =>
+        prevBanner === 0 ? banners.length - 1 : prevBanner - 1
+      );
+    } else {
+      setCurrentBanner((prevBanner) => (prevBanner + 1) % banners.length);
+    }
+  };
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => handleSwipe(-1),
+    onSwipedRight: () => handleSwipe(1),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true, // Para permitir que funcione com mouse também
+  });
 
   const produtosFiltrados = all_data
     .filter((product) =>
@@ -54,7 +71,7 @@ const ListaDeProdutos = () => {
           content="crochê, artesanato, bolsas de crochê, cachecóis de crochê, cestos de crochê, loja de crochê em Joinville"
         />
       </Helmet>
-      <div className="banner-container">
+      <div {...swipeHandlers} className="banner-container">
         <img
           className="banner-img"
           src={banners[currentBanner]}
