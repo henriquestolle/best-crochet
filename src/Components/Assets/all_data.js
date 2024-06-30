@@ -47,7 +47,7 @@ let all_data = [
     old_price: 89.99,
     qnt: 1,
     color: "Marrom e Bege",
-    size: "25x40cm",
+    size: "25x35cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -59,7 +59,7 @@ let all_data = [
     old_price: 149.99,
     qnt: 1,
     color: "Amarela e Bege",
-    size: "25x40cm",
+    size: "22x30cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -71,7 +71,7 @@ let all_data = [
     old_price: 79.99,
     qnt: 1,
     color: "Lilás",
-    size: "25x40cm",
+    size: "22x30cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -84,7 +84,7 @@ let all_data = [
     old_price: 179.99,
     qnt: 1,
     color: "Azul e Vermelho - Misto",
-    size: "25x40cm",
+    size: "25x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -96,7 +96,7 @@ let all_data = [
     old_price: 79.99,
     qnt: 1,
     color: "Bege",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -108,7 +108,7 @@ let all_data = [
     old_price: 119.99,
     qnt: 1,
     color: "Azul",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -120,7 +120,7 @@ let all_data = [
     old_price: 124.99,
     qnt: 1,
     color: "Marrom Terra",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -132,7 +132,7 @@ let all_data = [
     old_price: 99.99,
     qnt: 1,
     color: "Marrom Terra",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -144,7 +144,7 @@ let all_data = [
     old_price: 99.99,
     qnt: 1,
     color: "Azul",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -156,7 +156,7 @@ let all_data = [
     old_price: 129.99,
     qnt: 1,
     color: "Azul, Bege, Verde, Cinza e Vermelho",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -168,7 +168,7 @@ let all_data = [
     old_price: 99.99,
     qnt: 1,
     color: "Verde Claro e Verde Escuro",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -180,7 +180,7 @@ let all_data = [
   //     old_price: 129.99,
   //     qnt: 1,
   //     color: "Cor",
-  //     size: "25x40cm",
+  //     size: "22x25cm",
   //     description: "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   // },
   {
@@ -191,7 +191,7 @@ let all_data = [
     old_price: 129.99,
     qnt: 1,
     color: "Verde Escuro, Bege e Nude",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -203,7 +203,7 @@ let all_data = [
     old_price: 139.99,
     qnt: 1,
     color: "Marrom Terra e Azul",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -215,7 +215,7 @@ let all_data = [
     old_price: 139.99,
     qnt: 1,
     color: "Laranja",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -227,7 +227,7 @@ let all_data = [
     old_price: 119.99,
     qnt: 1,
     color: "Amarelo",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -239,7 +239,7 @@ let all_data = [
     old_price: 90.9,
     qnt: 1,
     color: "Marrom",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -251,7 +251,7 @@ let all_data = [
     old_price: 129.99,
     qnt: 1,
     color: "Prata",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -263,7 +263,7 @@ let all_data = [
     old_price: 59.99,
     qnt: 1,
     color: "Verde Escura, Bege e Nude",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -275,7 +275,7 @@ let all_data = [
     old_price: 129.99,
     qnt: 1,
     color: "Rosa, Branco e Cinza",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -287,7 +287,7 @@ let all_data = [
     old_price: 59.9,
     qnt: 1,
     color: "Lilás",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -299,7 +299,7 @@ let all_data = [
     old_price: 179.99,
     qnt: 1,
     color: "Preto",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -311,7 +311,7 @@ let all_data = [
     old_price: 289.99,
     qnt: 1,
     color: "Diversas Cores",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -323,7 +323,7 @@ let all_data = [
     old_price: 119.99,
     qnt: 1,
     color: "Vermelho",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -335,7 +335,7 @@ let all_data = [
     old_price: 119.99,
     qnt: 1,
     color: "Marrom Claro",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -347,7 +347,7 @@ let all_data = [
     old_price: 59.99,
     qnt: 1,
     color: "Ciano",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -359,7 +359,7 @@ let all_data = [
     old_price: 59.99,
     qnt: 1,
     color: "Bege",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -371,7 +371,7 @@ let all_data = [
   //   old_price: 129.99,
   //   qnt: 1,
   //   color: "Cor",
-  //   size: "25x40cm",
+  //   size: "22x25cm",
   //   description:
   //     "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   // },
@@ -383,7 +383,7 @@ let all_data = [
     old_price: 129.99,
     qnt: 1,
     color: "Rosa",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -395,7 +395,7 @@ let all_data = [
     old_price: 129.99,
     qnt: 1,
     color: "Nude, Verde e Vermelha",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -407,7 +407,7 @@ let all_data = [
     old_price: 129.99,
     qnt: 1,
     color: "Azul",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -419,7 +419,7 @@ let all_data = [
     old_price: 79.99,
     qnt: 1,
     color: "Rosa e Amarelo",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -431,7 +431,7 @@ let all_data = [
     old_price: 59.99,
     qnt: 1,
     color: "Nude",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -443,7 +443,7 @@ let all_data = [
     old_price: 139.99,
     qnt: 1,
     color: "Azul, Prata, Rosa e Vermelho",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -455,7 +455,7 @@ let all_data = [
     old_price: 159.99,
     qnt: 1,
     color: "Laranja, Rosa e Ciano",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -467,7 +467,7 @@ let all_data = [
     old_price: 129.99,
     qnt: 1,
     color: "Ciano",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -479,7 +479,7 @@ let all_data = [
     old_price: 59.99,
     qnt: 1,
     color: "Marrom Terra e Vermelho Escuro",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -491,7 +491,7 @@ let all_data = [
     old_price: 59.99,
     qnt: 1,
     color: "Amarelo, Nude e Rosa",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
@@ -503,7 +503,7 @@ let all_data = [
     old_price: 79.99,
     qnt: 1,
     color: "Laranja",
-    size: "25x40cm",
+    size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
   },
