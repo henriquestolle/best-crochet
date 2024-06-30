@@ -24,28 +24,6 @@ const ListaDeProdutos = () => {
     return () => clearInterval(interval);
   }, [banners.length]);
 
-  const scrollToEndOfScreen = () => {
-    const start = window.pageYOffset;
-    const end = document.documentElement.scrollHeight - window.innerHeight;
-    const duration = 1000;
-    const startTime = performance.now();
-
-    const animateScroll = (currentTime) => {
-      const timeElapsed = currentTime - startTime;
-      const progress = Math.min(timeElapsed / duration, 1);
-      const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t); // função de easing
-      const easedProgress = easeInOutQuad(progress);
-
-      window.scrollTo(0, start + (end - start) * easedProgress);
-
-      if (timeElapsed < duration) {
-        requestAnimationFrame(animateScroll);
-      }
-    };
-
-    requestAnimationFrame(animateScroll);
-  };
-
   const handleFiltroChange = (event) => {
     setFiltro(event.target.value);
   };
@@ -76,7 +54,7 @@ const ListaDeProdutos = () => {
           content="crochê, artesanato, bolsas de crochê, cachecóis de crochê, cestos de crochê, loja de crochê em Joinville"
         />
       </Helmet>
-      <div className="banner-container" onClick={scrollToEndOfScreen}>
+      <div className="banner-container">
         <img
           className="banner-img"
           src={banners[currentBanner]}
