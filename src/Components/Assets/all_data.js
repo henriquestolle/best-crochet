@@ -37,6 +37,19 @@ import img_bolsa_36 from "./img-bolsa-36.jpg";
 import img_bolsa_37 from "./img-bolsa-37.jpg";
 import img_bolsa_38 from "./img-bolsa-38.jpg";
 import img_bolsa_39 from "./img-bolsa-39.jpg";
+import img_bolsa_40 from "./img-bolsa-40.jpg";
+import img_bolsa_41 from "./img-bolsa-41.jpg";
+import img_bolsa_42 from "./img-bolsa-42.jpg";
+import img_bolsa_43 from "./img-bolsa-43.jpg";
+import img_bolsa_44 from "./img-bolsa-44.jpg";
+import img_bolsa_45 from "./img-bolsa-45.jpg";
+import img_bolsa_46 from "./img-bolsa-46.jpg";
+import img_bolsa_47 from "./img-bolsa-47.jpg";
+import img_bolsa_48 from "./img-bolsa-48.jpg";
+import img_bolsa_49 from "./img-bolsa-49.jpg";
+import img_bolsa_50 from "./img-bolsa-50.jpg";
+import img_bolsa_51 from "./img-bolsa-51.jpg";
+import img_bolsa_52 from "./img-bolsa-52.jpg";
 
 let all_data = [
   {
@@ -329,7 +342,7 @@ let all_data = [
   },
   {
     id: 25,
-    name: "Bolsa Clutch",
+    name: "Bolsa Clutch Alça Prata",
     img: img_bolsa_25,
     new_price: 99.9,
     old_price: 119.99,
@@ -503,6 +516,162 @@ let all_data = [
     old_price: 79.99,
     qnt: 1,
     color: "Laranja",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 40,
+    name: "Bolsa Transversal Azul com Preto",
+    img: img_bolsa_40,
+    new_price: 59.9,
+    old_price: 79.99,
+    qnt: 1,
+    color: "Azul e Preto",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 41,
+    name: "Bolsa Clutch Rosa Alça Dourada",
+    img: img_bolsa_41,
+    new_price: 99.9,
+    old_price: 129.99,
+    qnt: 1,
+    color: "Rosa",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 42,
+    name: "Bolsa Night Vermelho Escuro",
+    img: img_bolsa_42,
+    new_price: 149.9,
+    old_price: 179.99,
+    qnt: 1,
+    color: "Vermelho Escuro",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 43,
+    name: "Bolsa Prática Alça Redonda Cinza com Preto",
+    img: img_bolsa_43,
+    new_price: 149.9,
+    old_price: 179.99,
+    qnt: 1,
+    color: "Cinza e Preto",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 44,
+    name: "Bolsa Clutch Mostarda com Marrom",
+    img: img_bolsa_44,
+    new_price: 149.9,
+    old_price: 179.99,
+    qnt: 1,
+    color: "Mostarda e Marrom",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 45,
+    name: "Bolsa Infântil Transversal Esmeralda",
+    img: img_bolsa_45,
+    new_price: 39.9,
+    old_price: 49.99,
+    qnt: 1,
+    color: "Esmeralda",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 46,
+    name: "Bolsa Clutch Night Laranja",
+    img: img_bolsa_46,
+    new_price: 99.9,
+    old_price: 129.99,
+    qnt: 1,
+    color: "Laranja",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 47,
+    name: "Bolsa MDF Redonda Verde Escuro",
+    img: img_bolsa_47,
+    new_price: 65.9,
+    old_price: 89.99,
+    qnt: 1,
+    color: "Verde Escuro",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 48,
+    name: "Bolsa Transversal Vinho",
+    img: img_bolsa_48,
+    new_price: 45.9,
+    old_price: 59.99,
+    qnt: 1,
+    color: "Vinho",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 49,
+    name: "Bolsa Clutch Verde Neon",
+    img: img_bolsa_49,
+    new_price: 119.9,
+    old_price: 139.99,
+    qnt: 1,
+    color: "Verde Neon",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 50,
+    name: "Bolsa Prática Alça Redonda Verme Militar",
+    img: img_bolsa_50,
+    new_price: 149.9,
+    old_price: 179.99,
+    qnt: 1,
+    color: "Verme Militar",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 51,
+    name: "Bolsa Praia/Piscina Lanraja Alça de Couro",
+    img: img_bolsa_51,
+    new_price: 59.9,
+    old_price: 79.99,
+    qnt: 1,
+    color: "Lanraja",
+    size: "22x25cm",
+    description:
+      "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
+  },
+  {
+    id: 52,
+    name: "Bolsa Clutch Night Alça Corrente",
+    img: img_bolsa_52,
+    new_price: 149.9,
+    old_price: 79.99,
+    qnt: 1,
+    color: "Roxa Escuro",
     size: "22x25cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",

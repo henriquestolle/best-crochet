@@ -2,19 +2,20 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.907);
+  color: rgb(255, 255, 255);
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   z-index: 1000;
 }
 
 .cookie-consent button {
   margin-left: 10px;
-  padding: 5px 10px;
+  padding: 10px 45px;
   background-color: #4caf50;
   color: white;
   border: none;
+  border-radius: 3px;
   cursor: pointer;
 }
 
