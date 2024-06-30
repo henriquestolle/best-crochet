@@ -59,14 +59,20 @@ const ProductDisplay = () => {
             />
             <div className="product-details-section">
               <h1 className="product-name">{product.name}</h1>
-              <p className="price">R${product.new_price}</p>
+              <p className="color-detail">Cor: {product.color}</p>
+              <p className="price">
+                R${product.new_price}{" "}
+                <span className="span-detail-old-price">
+                  {product.old_price}
+                </span>
+              </p>
               <p className="price">Em Estoque: {product.qnt}</p>
               {product.qnt > 0 ? (
                 <button
                   className="buy-button in-stock"
                   onClick={() => handleAddToCart(product.id)}
                 >
-                  Comprar
+                  Adicionar à Sacola
                 </button>
               ) : (
                 <p className="out-of-stock">Esgotado</p>

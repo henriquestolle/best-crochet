@@ -44,7 +44,7 @@ let all_data = [
     name: "Bolsa Saco Vermelho e Bege",
     img: img_bolsa_01,
     new_price: 59.99,
-    old_price: 159.99,
+    old_price: 89.99,
     qnt: 1,
     color: "Marrom e Bege",
     size: "25x40cm",
@@ -155,7 +155,7 @@ let all_data = [
     new_price: 79.9,
     old_price: 129.99,
     qnt: 1,
-    color: "Azul, Bege, Verde, cinza e Vermelho",
+    color: "Azul, Bege, Verde, Cinza e Vermelho",
     size: "25x40cm",
     description:
       "Disponível em diversas cores e designs, esta bolsa combina estilo e funcionalidade. Adquira já a sua e realce seu look!",
