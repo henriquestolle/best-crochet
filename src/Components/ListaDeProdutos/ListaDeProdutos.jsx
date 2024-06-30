@@ -1,12 +1,13 @@
+import React, { useState, useEffect, useRef } from "react";
 import "./ListaDeProdutos.css";
 import banner_1 from "../Assets/banner_best_crochet.png_1.jpg";
 import banner_2 from "../Assets/banner_best_crochet.png_2.jpg";
 import banner_3 from "../Assets/banner_best_crochet.png_3.jpg";
 import banner_4 from "../Assets/banner_best_crochet.png_4.jpg";
-import { useState, useEffect, useRef } from "react";
 import all_data from "../Assets/all_data";
 import Item from "../Item/Item";
 import Footer from "../Footer/Footer";
+import { Helmet } from "react-helmet";
 
 const ListaDeProdutos = () => {
   const [termoPesquisa, setTermoPesquisa] = useState(""); // Estado para o termo de pesquisa
@@ -64,8 +65,23 @@ const ListaDeProdutos = () => {
 
   return (
     <div className="lista-produtos-main">
+      <Helmet>
+        <title>Best Crochet - Loja de Crochê em Joinville, SC</title>
+        <meta
+          name="description"
+          content="Explore a melhor loja de crochê artesanal em Joinville, SC. Descubra bolsas, cachecóis, cestos e muito mais. Envio rápido e várias opções de pagamento."
+        />
+        <meta
+          name="keywords"
+          content="crochê, artesanato, bolsas de crochê, cachecóis de crochê, cestos de crochê, loja de crochê em Joinville"
+        />
+      </Helmet>
       <div className="banner-container" onClick={scrollToEndOfScreen}>
-        <img className="banner-img" src={banners[currentBanner]} alt="banner" />
+        <img
+          className="banner-img"
+          src={banners[currentBanner]}
+          alt={`Banner ${currentBanner + 1}`}
+        />
         <div className="banner-indicators">
           {banners.map((_, index) => (
             <span
@@ -79,6 +95,87 @@ const ListaDeProdutos = () => {
       <nav className="breadcrumb-home">
         <span>Home</span>
       </nav>
+      <div className="geral-service-conteiner">
+        <div className="service-container">
+          <div className="service-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M21 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <div className="service-text">
+              <div className="service-title">LOCALIZAÇÃO PARA ENTREGAS</div>
+              <div className="service-description">Joinville e Região</div>
+            </div>
+          </div>
+          <div className="service-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M3 3h18v13H3z" />
+              <path d="M1 8h22" />
+              <path d="M3 21h18" />
+            </svg>
+            <div className="service-text">
+              <div className="service-title">ENVIO RÁPIDO</div>
+              <div className="service-description">
+                Enviamos rapidamente após a compra
+              </div>
+            </div>
+          </div>
+          <div className="service-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+              <path d="M1 10h22" />
+              <path d="M7 6v4" />
+              <path d="M17 6v4" />
+            </svg>
+            <div className="service-text">
+              <div className="service-title">PAGAMENTO FÁCIL</div>
+              <div className="service-description">Várias opções</div>
+            </div>
+          </div>
+          <div className="service-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="3" y="11" width="18" height="10" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+            <div className="service-text">
+              <div className="service-title">COMPRA SEGURA</div>
+              <div className="service-description">Dados Privados</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="text-crochet">
         <p>crochet</p>
       </div>
@@ -87,14 +184,14 @@ const ListaDeProdutos = () => {
           <div className="filter-item">
             <select value={filtro} onChange={handleFiltroChange}>
               <option value="sem filtro">Sem Filtro</option>
-              <option value="alfabetica">Order Alfabética</option>
-              <option value="preco">Ordenar Por Preço</option>
+              <option value="alfabetica">Order Alfabética [A-Z]</option>
+              <option value="preco">Ordenar Por Menor Preço</option>
             </select>
           </div>
         </div>
       </div>
       <div className="conteudos-geral-lista-produtos">
-        <p className="conteudos-titulo">Todos Produtos</p>
+        <h2 className="conteudos-titulo">Todos Produtos</h2>
         <p id="texto-exibindo">
           Exibindo {produtosFiltrados.length} resultados
         </p>
