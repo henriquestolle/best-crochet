@@ -46,11 +46,12 @@
 /* Service */
 .geral-service-conteiner {
   font-family: Arial, sans-serif;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: #f9f9f9;
+  background-color: #f9f9f900;
 }
 
 .service-container {
