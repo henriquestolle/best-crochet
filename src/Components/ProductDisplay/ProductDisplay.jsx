@@ -48,8 +48,14 @@ const ProductDisplay = () => {
       {product && (
         <div className="product-display-info">
           <nav className="breadcrumb">
-            <span>Início</span> &gt; <span>Bolos</span> &gt;{" "}
-            <span>{product.name}</span>
+            <b>
+              <span>Início</span>
+            </b>{" "}
+            &gt;{" "}
+            <b>
+              <span>Bolsas</span>
+            </b>{" "}
+            &gt; <span>{product.name}</span>
           </nav>
           <div className="product-container">
             <img

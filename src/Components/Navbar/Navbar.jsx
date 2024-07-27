@@ -29,10 +29,10 @@ const Navbar = () => {
         <button onClick={toggleMenu} className="close-btn">
           &times; {/* Ícone de fechar */}
         </button>
-        <Link to="/product">Produtos</Link>
-        <Link to="/contact">Contato</Link>
-        <Link to="/about">Sobre Nós</Link>
-        <Link to="/">Home</Link>
+        <Link to="/product">TODOS OS PRODUTOS</Link>
+        <Link to="/contact">CONTATO</Link>
+        <Link to="/about">SOBRE NÓS</Link>
+        <Link to="/">HOME</Link>
       </div>
       <div className="carrinho-compras">
         <Link to="/cart">
