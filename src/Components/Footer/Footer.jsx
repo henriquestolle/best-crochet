@@ -12,8 +12,12 @@ const Footer = () => {
       </div>
       <div className="menu">
         <h3>Menu</h3>
-        <Link to="/">Home</Link>
-        <Link to="/shop">Todos os produtos</Link>
+        <Link to="/">
+          <p>Home</p>
+        </Link>
+        <Link to="/shop">
+          <p>Todos os produtos</p>
+        </Link>
         <a
           href="https://wa.me/47988883180?text=Olá,%20tudo%20bem?"
           target="_blank"
@@ -23,7 +27,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="categorias">
-        <h3>Categorias</h3>
+        <p>Categorias</p>
         <p>
           <i className="fas fa-map-marker-alt"></i> Bolsas
         </p>
@@ -35,7 +39,7 @@ const Footer = () => {
         </p>
       </div>
       <div className="contato">
-        <h3>Contato</h3>
+        <p>Contato</p>
         <p>
           <i className="fas fa-map-marker-alt"></i> Anitta Garibaldi, Joinville,
           SC, Brasil
